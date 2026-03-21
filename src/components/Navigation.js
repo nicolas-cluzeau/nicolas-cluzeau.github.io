@@ -1,55 +1,88 @@
-export const Navigation = (projectData, skillData) => {
+export const Navigation = (projectData, skillData, svgIcons) => {
   return `
-    <nav class="glass">
-      <div class="nav-container">
-        <a href="#/" class="logo">Nicolas CLUZEAU</a>
-        <button class="mobile-toggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links">
-          <li class="nav-item">
-            <a href="#/" class="nav-link has-dropdown">Accueil <span class="arrow">⌄</span></a>
-            <div class="dropdown glass">
-              <a href="#/presentation" class="dropdown-link">Ma Présentation</a>
-              <a href="#/parcours" class="dropdown-link">Mon parcours</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#/realisations" class="nav-link has-dropdown">Réalisations <span class="arrow">⌄</span></a>
-            <div class="dropdown glass">
+    <nav class="sidebar-nav">
+      <div class="sidebar-top">
+        <a href="#/" class="logo-sidebar">
+          <span class="logo-init">NC</span>
+        </a>
+      </div>
+      
+      <ul class="nav-links-vertical">
+        <li class="nav-item-vertical" data-drawer="home">
+          <a href="#/" class="nav-icon-link">
+            <span class="nav-icon">${svgIcons.home}</span>
+            <span class="nav-label">Accueil</span>
+          </a>
+          <div class="nav-drawer glass" id="drawer-home">
+             <div class="drawer-header">Accueil</div>
+             <a href="#/presentation" class="drawer-link nav-link-final">Ma Présentation</a>
+             <a href="#/parcours" class="drawer-link nav-link-final">Mon parcours</a>
+          </div>
+        </li>
+        
+        <li class="nav-item-vertical" data-drawer="projects">
+          <a href="#/realisations" class="nav-icon-link">
+            <span class="nav-icon">${svgIcons.briefcase}</span>
+            <span class="nav-label">Projets</span>
+          </a>
+          <div class="nav-drawer glass" id="drawer-projects">
+            <div class="drawer-header">Réalisations</div>
+            <div class="drawer-grid">
               ${Object.entries(projectData).map(([id, data]) => `
-                <a href="#/realisations/${id}" class="dropdown-link">${data.title}</a>
+                <a href="#/realisations/${id}" class="drawer-link-card nav-link-final">
+                  <span class="mini-icon">${data.icon}</span>
+                  <span>${data.title}</span>
+                </a>
               `).join('')}
             </div>
-          </li>
-          <li class="nav-item">
-            <a href="#/competences" class="nav-link has-dropdown">Compétences <span class="arrow">⌄</span></a>
-            <div class="dropdown glass">
-              <div class="dropdown-item">
-                <a href="#/competences/techniques" class="dropdown-link has-nested">Techniques <span class="arrow">›</span></a>
-                <div class="nested-dropdown glass">
-                  ${Object.entries(skillData.techniques).map(([id, data]) => `
-                    <a href="#/competences/techniques/${id}" class="dropdown-link">${data.title}</a>
-                  `).join('')}
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <a href="#/competences/humaines" class="dropdown-link has-nested">Humaines <span class="arrow">›</span></a>
-                <div class="nested-dropdown glass">
-                  ${Object.entries(skillData.humaines).map(([id, data]) => `
-                    <a href="#/competences/humaines/${id}" class="dropdown-link">${data.title}</a>
-                  `).join('')}
-                </div>
+          </div>
+        </li>
+
+        <li class="nav-item-vertical" data-drawer="skills">
+          <a href="#/competences" class="nav-icon-link">
+            <span class="nav-icon">${svgIcons.code}</span>
+            <span class="nav-label">Skills</span>
+          </a>
+          <div class="nav-drawer glass" id="drawer-skills">
+            <div class="drawer-header">Compétences</div>
+            <div class="drawer-section">
+              <h4>Techniques</h4>
+              <div class="drawer-grid">
+                ${Object.entries(skillData.techniques).map(([id, data]) => `
+                  <a href="#/competences/techniques/${id}" class="drawer-link-card nav-link-final">
+                    <span class="mini-icon">${data.icon}</span>
+                    <span>${data.title}</span>
+                  </a>
+                `).join('')}
               </div>
             </div>
-          </li>
-          <li class="nav-item">
-            <a href="#/contact" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </div>
+            <div class="drawer-section">
+              <h4>Humaines</h4>
+              <div class="drawer-grid">
+                ${Object.entries(skillData.humaines).map(([id, data]) => `
+                  <a href="#/competences/humaines/${id}" class="drawer-link-card nav-link-final">
+                    <span class="mini-icon">${data.icon}</span>
+                    <span>${data.title}</span>
+                  </a>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item-vertical">
+          <a href="#/contact" class="nav-icon-link nav-link-final">
+            <span class="nav-icon">${svgIcons.mail}</span>
+            <span class="nav-label">Contact</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="mobile-toggle-sidebar" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   `;
 };

@@ -20,7 +20,11 @@ const SVGIcons = {
   clipboard: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>`,
   users: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
   message: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
-  person: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
+  person: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+  home: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  briefcase: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
+  code: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+  mail: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`
 };
 
 // Personalized Data
@@ -29,6 +33,12 @@ const projectData = {
     title: "Projet DockStock",
     icon: SVGIcons.docker,
     desc: "Mise en place d'une infrastructure redondée et sécurisée pour l'hébergement de conteneurs Docker.",
+    relatedSkills: [
+      { type: 'techniques', id: 4 },
+      { type: 'techniques', id: 5 },
+      { type: 'humaines', id: 1 },
+      { type: 'humaines', id: 3 }
+    ],
     fullContent: `
       <h3>Introduction</h3>
       <p>Cette réalisation a été effectuée durant ma seconde année de Bachelor AIS (Administrateur d’Infrastructures Sécurisées) au sein du Groupe AEN à Agen (47). Pour chaque semestre des deux premières années, des projets informatiques étaient confiés à des groupes d’étudiants, afin de les professionnaliser à délivrer une solution technique correspondant à un cahier des charges donné par un commanditaire, ainsi que pour appliquer les connaissances apprises pendant le semestre.</p>
@@ -97,6 +107,13 @@ const projectData = {
     title: "Projet Walltesters",
     icon: SVGIcons.shield,
     desc: "Réalisation d'une série de tests de résilience sur le pare-feu opensource BunkerWeb.",
+    relatedSkills: [
+      { type: 'techniques', id: 3 },
+      { type: 'techniques', id: 5 },
+      { type: 'humaines', id: 2 },
+      { type: 'humaines', id: 3 },
+      { type: 'humaines', id: 4 }
+    ],
     fullContent: `
       <h3>Introduction</h3>
       <p>Cette réalisation a été effectuée durant ma troisième année de Bachelor AIS (Administrateur d’Infrastructures Sécurisées) au sein du Groupe ESIEA à Agen (47). Pour cette troisième année, un projet informatique était confié à notre promotion, afin de nous professionnaliser à délivrer une solution technique correspondant à un cahier des charges donné par un commanditaire, ainsi que pour appliquer les connaissances apprises pendant l’année.</p>
@@ -140,12 +157,12 @@ const projectData = {
       <p>De mon côté, j’ai pu me connecter en SSH à la machine Ubuntu fournie par notre commanditaire, avant d’installer Docker et docker-compose. Nous avons ensuite exploré la documentation de Bunkerweb afin de faire un choix entre les trois installations possibles : Docker, Docker Autoconf, et Docker Swarm. La différence entre Docker et Docker Autoconf est que, dans le mode Autoconf, un conteneur bw-autoconf est ajouté. Ce dernier permet d’appliquer des configurations sur des services tels que des applications web à partir de labels ajoutés dans le fichier docker-compose. Notre commanditaire nous avait aussi recommander de ne pas utiliser l’installation Docker Swarm, car elle n’était que très rarement utilisée. Nous avons donc choisi l’installation Docker Autoconf.</p>
       <p>Nous avons utilisé le fichier docker-compose fourni dans la documentation de Bunkerweb pour vérifier notre installation de Docker et docker-compose, ainsi que pour nous familiariser avec la structure du pare-feu avant d’ajouter des fonctionnalités. Ce dernier est composé de plusieurs conteneurs :</p>
       <ul>
-        <li>Le conteneur BunkerWeb est le cœur du pare-feu</li>
-        <li>Le conteneur bw-autoconf est le conteneur permettant l’autoconfiguration des services web en fonction des labels qui leur sont assignés dans le fichier docker-compose</li>
+        <li>Le conteneur BunkerWeb est le cœur du pare-feu.</li>
+        <li>Le conteneur bw-autoconf est le conteneur permettant l’autoconfiguration des services web en fonction des labels qui leur sont assignés dans le fichier docker-compose.</li>
         <li>Le conteneur bw-scheduler est le conteneur permettant l’orchestration de tous les conteneurs de la stack Bunkerweb.</li>
-        <li>Le conteneur bw-ui est le conteneur permettant d’administrer Bunkerweb via une interface web</li>
+        <li>Le conteneur bw-ui est le conteneur permettant d’administrer Bunkerweb via une interface web.</li>
         <li>Le conteneur bw-db est le conteneur permettant de stocker les données de configuration du pare-feu</li>
-        <li>Le conteneur bw-docker est le conteneur protégeant le socket Docker pour éviter l’utilisation de Docker depuis un réseau extérieur</li>
+        <li>Le conteneur bw-docker est le conteneur protégeant le socket Docker pour éviter l’utilisation de Docker depuis un réseau extérieur.</li>
       </ul>
       <p>Une fois la première installation de Bunkerweb validée, nous avons pu utiliser une licence payante PRO fournie par notre commanditaire. Cela nous a permis d’ajouter au fur et à mesure toutes les fonctionnalités de sécurité souhaitées. Un CAPTCHA a été mis en place afin de bloquer l’accès à l’interface web aux robots présents sur Internet. La création d’un certificat SSL autosigné a été implémentée, qui fut remplacée par l’utilisation d’un module Let’s Encrypt intégré, ainsi qu’un proxy inversé afin de ne pas exposer directement les adresses IP des futurs serveurs web. La mise en place d’une protection anti-DDoS et d’un compte administrateur a aussi été incluse dans l’autoconfiguration.</p>
       <p>Après la mise en place de Bunkerweb, nous nous sommes attelés à la création de la stack de supervision. Nous avions l’avantage qu’une partie de l’équipe avait réalisé un projet informatique en semestre 4 qui incluait une infrastructure de supervision conteneurisée. Nous avons pu réutiliser les technologies mises en place dans ce projet, afin de créer une stack de supervision permettant de récupérer toutes les métriques de l’infrastructure docker globale, tout en étant protégée par le pare-feu Bunkerweb. La supervision est assurée par plusieurs conteneurs :</p>
@@ -176,9 +193,248 @@ const projectData = {
       <p>Ce projet était l’un des plus compliqués que j’ai eu à réaliser en termes d’organisation, puisque je n’avais jamais travaillé avec autant de camarades sur un projet, et c’était mon premier projet d’école à réaliser pendant une période d’alternance. Grâce à ce projet, j’ai énormément approfondi mes connaissances de Docker et en cybersécurité, mais aussi renforcé mes compétences relationnelles et d’organisation. Je suis très fier d’avoir pu présenter ce projet à des professionnels de l’informatique lors du Techday, et je remercie sincèrement Messieurs Florian PITANCE et Théophile DIOT pour nous avoir fait confiance pour la réalisation de ce projet, ainsi que l’ensemble des enseignants qui nous ont encadrés et ont pu rendre ce projet possible.</p>
       `
   },
-  3: { title: "Projet Netflow", icon: SVGIcons.flow, desc: "Création d'un collecteur de flux Netflow conteneurisé.", fullContent: `` },
-  4: { title: "MCO d'un datacenter", icon: SVGIcons.server, desc: "Réalisation du Maintien en Condition Opérationnelle d'un datacenter certifié HDS et ISO 27001.", fullContent: `` },
-  5: { title: "Déploiement de supervision automatisé", icon: SVGIcons.automation, desc: "Déploiement d'une solution de supervision avec Ansible.", fullContent: `` }
+  3: {
+    title: "Projet Netflow",
+    icon: SVGIcons.flow,
+    desc: "Installation d'un collecteur Netflow pour la surveillance réseau.",
+    relatedSkills: [
+      { type: 'techniques', id: 1 },
+      { type: 'techniques', id: 5 },
+      { type: 'humaines', id: 2 },
+      { type: 'humaines', id: 4 },
+      { type: 'humaines', id: 5 }
+    ],
+    fullContent: `
+      <h3>Avant-propos</h3>
+      <p>Cette réalisation a été réalisée dans le cadre d’un environnement de datacenter. Certaines informations ont été volontairement supprimées afin de préserver la confidentialité des individus et des technologies employés sur le datacenter.</p>
+
+      <h3>Introduction</h3>
+      <p>Dans le cadre de mon Bachelor Administrateur d’Infrastructures Sécurisées à INTECH Agen devenu ESIEA débuté en septembre 2021, j’ai travaillé pendant un an en alternance en tant qu’Administrateur d’Infrastructures pour le compte de l’entreprise <a href="https://www.berger-levrault.com/fr">Berger-Levrault.</a></p>
+      <p>Le groupe Berger-Levrault est une entreprise spécialisée dans l’édition de solutions logicielles SaaS (Software as a Service) pour les collectivités françaises, les établissements sanitaires, sociaux et médico-sociaux, ainsi que de l’hébergement libre IaaS (Infrastructure as a Service).</p>
+      <p>J’ai intégré l’entreprise an tant qu’Administrateur d’Infrastructures sur le datacenter principal du groupe. Mon métier consiste à assurer le Maintien en Condition Opérationnelle (MCO) du datacenter. La MCO est la liste des opérations prises afin de garantir le bon fonctionnement de l’infrastructure en place. Ces mesures sont détaillées dans la réalisation : « <a href="#/realisations/4">MCO d’un datacenter</a> ».</p>
+
+      <h3>Le protocole NetFlow</h3>
+      <p>NetFlow est une architecture propriétaire développée en 1996 par l’entreprise américaine <a href="https://www.cisco.com/">Cisco Systems</a> qui permet de collecter des informations variées sur les flux IP transitant par une interface d’un équipement tel qu’un routeur, un pare-feu ou un routeur.</p>
+      <p>De nombreuses versions de NetFlow sont disponibles, mais les plus communes sont :</p>
+      <ul>
+        <li>Le NetFlow v5 : Déjà disponible sur de nombreux routeurs à partir de 2009, c’est une version de NetFlow qui ne gère que les flux IPv4. De plus, les informations données sur les flux sont basiques et se limitent à l’interface par laquelle passe le flux, les adresses IP et port source et destination, ainsi que le numéro de protocole encapsulé par le datagramme IP.</li>
+        <li>Le NetFlow v9 : Défini dans la RFC 3954 en octobre 2004, c’est une version améliorée du NetFlow v5, supportant l’IPv6 et même des technologies telles que le MPLS. Les informations données sont aussi plus conséquentes, car elles sont régies par des « modèles » créés par les équipementiers (Cisco, Juniper, Huawei, etc.).</li>
+        <li>L’IPFIX (Internet Protocol Flow Information eXport) : C’est un protocole créé par l’IETF (Internet Engineering Task Force) basé sur le NetFlow v10</li>
+      </ul>
+      <p>Les informations sont envoyées sur un serveur spécialisé appelé collecteur. Il est ensuite possible d’analyser ces informations en ligne de commande ou via une interface graphique afin de les corroborer avec un serveur Syslog ou un serveur de supervision. Cela permet d’accélérer l’identification de problèmes réseaux comme de la congestion ou des intrusions dans une infrastructure réseau.</p>
+
+      <h3>Objectifs</h3>
+      <p>Cette réalisation a été mise en place au cours d’une alternance d’une durée de 10 mois. De nombreux objectifs, à la fois humains et techniques, étaient attendus.</p>
+      <p>Humainement, j’ai pu développer mes compétences relationnelles avec les différentes parties prenantes du projet. Cette alternance était ma première expérience du monde professionnel, et j’ai pu renforcer mes capacités de collaboration et d’organisation déjà acquises au cours des projets étudiants réalisés entre 2021 et 2023. J’ai aussi pu travailler avec les différentes équipes techniques de Berger-Levrault, ce qui m’a permis de mieux découvrir la manière de travailler dans l’entreprise.</p>
+      <p>Techniquement, l’objectif principal était de renforcer le degré de visualisation des flux réseaux entre le datacenter et l’Internet. Sur une infrastructure réseau, il est critique de savoir quels types de flux entrent et sortent, afin de réagir au plus vite en cas de problème réseau ou de cyberattaque. L’objectif secondaire était de m’acclimater à l’infrastructure existante du datacenter. L’infrastructure sur laquelle je travaillais contenant plus d’un millier de VLAN et de nombreux équipements réseaux et pares-feux, ce projet m’a permis de me familiariser avec tous les composants du datacenter, ce qui a grandement approfondi ma compréhension des tâches de MCO que je réalisais.</p>
+
+      <h3>Contexte humain</h3>
+      <p>Ce projet est le premier projet en entreprise sur lequel je réalisais l’intégralité de la partie technique et organisationnelle. Cependant, j’étais sous la tutelle de plusieurs de mes collègues afin que le projet se déroule dans les meilleures conditions.</p>
+      <p>Mon manager, qui était aussi le responsable du datacenter, a pris le rôle de client. Il a pu m’expliquer ses besoins, et était toujours présent pour répondre à mes questions quant au projet. Mon maître de formation, qui était l’un de mes collègues, m’a permis d’obtenir tous les accès nécessaires aux équipements, afin que je puisse réaliser toutes les opérations pour mettre en place la solution technique. J’ai aussi pu recevoir l’aide de toute l’équipe « Infrastructure & Cloud Operations » dont je faisais partie, et j’ai grandement bénéficié de leur expertise technique. Grâce à eux, j’ai pu m’épanouir dans ce projet et le réaliser dans les meilleures conditions possibles.</p>
+
+      <h3>Contexte technique</h3>
+      <p>Ce projet est aussi le premier où l’on m’a donné carte blanche sur la solution technique. Avec ce degré de liberté offert, j’ai donc pu expérimenter avec différentes technologies pour réaliser le collecteur NetFlow. Je n’avais que deux règles pour le choix de la solution :</p>
+      <ul>
+        <li>La solution technique sera installée sur un serveur physique. Je devais donc définir une architecture et une solution qui ne soit pas trop gourmande au niveau matériel.</li>
+        <li>La solution technique choisie doit avoir un impact minime sur le budget annuel du datacenter puisque ce dernier a été décidé sans que ce projet soit imaginé.</li>
+      </ul>
+      <p>Ces contraintes ont influencé grandement mon choix des technologies pour ce projet.</p>
+
+      <h3>Enjeux</h3>
+      <p>Dans cette réalisation, les enjeux étaient la satisfaction des besoins du client, le respect des délais de livraison et la validation des enseignements de mon bachelor.</p>
+      <p>Le premier enjeu a été de travailler sur un projet avec des implications dans le datacenter. J’étais responsable de livrer une solution technique correspondant aux besoins du responsable du datacenter. Ce projet allait ensuite être utilisé pendant plusieurs années au sein du datacenter et allait avoir une importance au sein du processus de détection et d’identification des incidents au sein de l’équipe de gestion du datacenter.</p>
+      <p>Le second enjeu a été de respecter un délai de livraison de la solution. La contrainte temporelle a été l’élément moteur du projet, car le responsable du datacenter souhaitait que la solution technique soit mise en place devait être mise en production avant un audit annuel dans le cadre de la certification des Hébergeurs de Données de Santé (HDS).</p>
+      <p>L’enjeu final était de valider les enseignements de mon bachelor, car j’avais choisi de rédiger un dossier de projet sur cette réalisation, retraçant tous les éléments du projet, ainsi qu’une présentation orale devant un jury composé de professionnels du métier, afin de valider le Bachelor Administrateur d’Infrastructures Sécurisées.</p>
+
+      <h3>Risques</h3>
+      <p>Les risques principaux rencontrés au cours du projet étaient de proposer une solution ne correspondant pas aux besoins du client. Il fallait aussi répondre aux besoins avec des coûts financiers limités, tout en délivrant une solution technique adaptée aux certifications ISO 27001 et HDS.</p>
+
+      <h3>Interaction avec les parties prenantes</h3>
+      <p>Afin de garder un cap précis et un avancement continu, j’ai organisé des réunions hebdomadaires avec le client et mon maître de formation. Ces réunions m’ont permis de m’adapter à tout changement venant du client. J’ai aussi pu en profiter pour expliquer mes différents blocages techniques, et de recevoir de l’aide là-dessus.</p>
+      <p>J’ai aussi organisé avec eux une réunion mensuelle où j’ai pu montrer mon avancement par le biais d’une présentation. Cela m’a permis de recevoir un retour du client sur la solution technique et sa mise en place, car malgré son rôle de responsable du datacenter, il ne se situait pas sur le site du datacenter.</p>
+
+      <h3>Étapes du projet</h3>
+      <p>Comme le cahier des charges du client me donnait une grande liberté au niveau des technologies utilisées, j’ai réalisé un benchmarking des différentes solutions techniques possibles, mais aussi des protocoles de surveillance des flux IP possible. J’ai donc comparé les protocoles NetFlow v5 et v9 entre eux, mais aussi avec l’IPFIX et un quatrième protocole, le SFlow. Le SFlow (Sampled Flow), est un protocole similaire au NetFlow v5 en fonctionnement, sauf qu’il réalise un échantillonnage des flux IP afin de réduire la charge matérielle sur les équipements réseaux. Cependant, en ne récupérant qu’un flux sur 5, 10, ou même 20, la solution technique perd en précision.</p>
+      <p>Le choix déterminant du protocole a été fait en fonction de la compatibilité avec notre marque de pare-feu périmétrique. NetFlow v9 étant compatible contrairement à l’IPFIX, c’est devenu le protocole utilisé dans la solution technique.</p>
+      <p>J’ai ensuite réalisé un Proof Of Concept (POC) afin de démontrer la faisabilité de la solution technique choisie. J’ai décidé d’utiliser la stack Elastic, car c’est une technologie déjà utilisée sur d’autres sites du groupe Berger-Levrault en tant que collecteur Syslog.</p>
+      <p>La stack Elastic (souvent appelée stack ELK) est une série de composants applicatifs permettent de collecter, formater et afficher une grande variété de données. Elle est composée de quatre éléments majeurs :</p>
+
+      <ul>
+        <li>Elasticsearch : C’est un moteur de recherche basé sur Apache Lucene qui permet le stockage, l’indexation et la recherche de données. C’est le cœur de la stack ELK.</li>
+        <li>Logstash : C’est un outil de collecte, d’analyse et d’ingestion des données. Il permet aussi de réaliser un formatage sur les données entrantes, avant de les envoyer vers Elasticsearch.</li>
+        <li>Kibana : C’est un outil de visualisation de données. Il permet de visualiser graphiquement une grande quantité d’informations stockée par Elasticsearch sous formes de courbes, graphiques et tableaux.</li>
+        <li>Filebeat : C’est un module détaché de Logstash qui permet d’appliquer des formatages spécifiques sur des protocoles particuliers, comme le Syslog ou le NetFlow.</li>
+      </ul>
+
+      <p>Afin de réaliser ce POC, j’ai décidé d’utiliser une machine virtuelle Ubuntu 22.04. J’ai opté pour un système d’exploitation Linux car les licences Windows Server 2022 Datacenter sont couteuses, et un système d’exploitation Linux sans interface graphique consomme moins de ressources matérielles. J’ai placé la machine dans un réseau spécial du datacenter dédié aux machines de test et aux POC. J’ai ensuite récupéré la stack Elastic via la commande wget pour avoir un fichier compressé avec tous les composants du stack.</p>
+      <p>La configuration de la stack Elastic a été réalisé en mode « standalone ». Chaque instance d’Elasticsearch est appelé un nœud, et peut avoir un rôle spécifique dans l’ingestion et la recherche de données. Les nœuds peuvent être mis en cluster afin d’apporter de la redondance et de la répartition de charge au collecteur. Ici, comme chaque nœud Elasticsearch demande une grande allocation de processeur et mémoire, il n’y en a qu’un seul. Cela permet de tester le fonctionnement de la stack dans un environnement où la tolérance aux pannes n’est pas nécessaire, car c’est un environnement de test.</p>
+      <p>Le collecteur de POC configuré, j’ai commencé à ouvrir les flux sur les différents pares-feux internes et périphériques du datacenter, pour que les flux NetFlow qui utilisent le port 2055 en UDP puissent circuler des équipements source vers le collecteur dans le réseau de test. En effet, j’ai eu l’autorisation de configurer l’envoi de flux NetFlow sur un pare-feu périmétrique où l’on ne trouve aucun flux de production. Cela permet de tester la solution entière, de l’envoi des flux à l’affichage des données collectées, sans risque de causer un incident majeur sur un équipement de production.</p>
+      <p>Une fois la configuration de l’exportateur de flux NetFlow et l’ouverture des flux réalisées, la solution a pu être testée et validée.</p>
+      <p>Pour m’atteler à la mise en production, je me suis servi d’un ancien serveur de sauvegarde décommissionné. Le responsable du datacenter a considéré que la réutilisation du serveur et l’achat d’un support de plusieurs années auprès d’une entreprise spécialisée était un meilleur choix que d’héberger la solution sur notre infrastructure virtualisée, demandant une allocation de ressources extrême. Le serveur a des caractéristiques matérielles excellentes, avec 20 cœurs de processeur, 128 Go de mémoire vive, deux disques systèmes de 1 To chacun en redondance RAID 1, et 24 disques de données de 10 To chacun.</p>
+      <p>Je me suis attelé d’abord à la configuration des cartes RAID des disques de données. Le collecteur de test n’ayant fonctionné que pendant deux jours, avec un seul pare-feu avec des flux réduits en tant qu’exportateur, nous n’avons pas pu estimer la quantité de stockage nécessaire afin d’avoir une rétention des données d’un an pour tous les pares-feux périmétriques du datacenter. J’ai donc décidé de prévoir un stockage important. J’ai découpé les 24 disques en quatre groupes RAID 5 de six disques :</p>
+
+      <ul>
+        <li>Les trois premiers groupes RAID seront utilisés par un nœud Elasticsearch chacun. Ainsi, chaque nœud aura 50 To de stockage à sa disposition. L’équivalent d’un disque (10 To) est utilisé par les partitions de contrôle du RAID qui sont écrites sur chaque disque.</li>
+        <li>Le dernier groupe est laissé inutilisé, en attente. Si le stockage alloué aux nœuds n’est pas suffisant, alors jusqu’à deux disques pourront être ajoutés à chaque groupe RAID. Aussi, si un des disques alloués vient à subir une panne, nous pourrons rapidement remplacer le disque par un inutilisé afin de ne pas attendre que le support nous en envoie un autre pour recréer le RAID.</li>
+      </ul>
+
+      <p>Après la configuration du RAID, j’ai installé le système d’exploitation Ubuntu 22.04, comme pour le POC. Comme le serveur avait deux ports Ethernet 10Gb, j’ai configuré un agrégat des ports, ou LAG (Link Aggregation Group). Cela permet aux deux ports de partager la même adresse IP. De plus, en mode LACP (Link Aggregation Control Protocol), les deux ports sont actifs en même temps, doublant la bande passante. Cet agrégat de lien va servir pour la collecte des flux NetFlow. Un autre agrégat, cette fois de ports Ethernet 1Gb, est créé pour la partie management du serveur.</p>
+      <p>J’ai ensuite dû modifier la configuration de la stack de switches sur lesquels le serveur est raccordé. J’ai dû renommer les PortChannels (agrégats de lien entre switches Cisco) pour qu’ils correspondent au rôle du collecteur, et modifier le VLAN des ports pour correspondre à la nouvelle assignation IP du collecteur.</p>
+      <p>Pour installer la stack Elastic en mode « clustering », j’ai décidé d’utiliser une autre technologie : Docker. C’est une technologie qui permet de créer des environnements logiciels isolés appelés « conteneurs ». Docker est assez peu utilisé sur le datacenter, et c’était une technologie que je ne maîtrisais que peu avant ce projet.</p>
+      <p>Pour créer l’architecture du collecteur souhaitée, j’ai dû utiliser un outil de docker appelé docker-compose. Il permet, à partir de ficher YAML, d’automatiser la création de plusieurs conteneurs avec des configurations spécifiques. En me basant sur le fichier YAML créé par Elastic, j’ai créé l’architecture suivante :</p>
+
+      <ul>
+        <li>Un conteneur « setup » : Ce conteneur Elasticsearch est le premier à se lancer et ne sert qu’à créer les certificats SSL pour chaque nœud de l’architecture, ainsi que configurer les mots de passe pour les comptes de service de la stack.</li>
+        <li>Trois conteneurs « nœud » : Numérotés de 1 à 3, ce sont les trois instances d’Elasticsearch. Configurés en mode « Cluster », ils peuvent se répartir les tâches et aussi survivre à la panne d’un d’entre eux sans que le collecteur tombe.</li>
+        <li>Un conteneur Kibana : Ce conteneur est directement connecté au cluster Elasticsearch. Il permet de visualiser toutes les données via des tableaux de bord modifiables. Il est ouvert vers l’extérieur sur le port 5601 en TCP.</li>
+        <li>Un conteneur Filebeat : Ce conteneur gère l’ingestion des données grâce à son module « NetFlow ». Les données ingérées sont directement envoyées vers le cluster Elasticsearch.</li>
+      </ul>
+
+      <p>Après l’installation de la stack sur Docker, j’ai entamé la configuration de l’exportation NetFlow des différents pares-feux périmétriques. Le test sur le POC nous a montré que l’ajout de l’exportateur de flux NetFlow n’augmente pas de manière significative la consommation de ressources du pare-feu. J’ai tout de même décidé de réaliser les opérations pendant la pause déjeuner pour réduire les perturbations sur la production. Cette configuration a été implémentée sur tous les pares-feux périmétriques, ainsi que les pares-feux sur lesquels des tunnels VPN sont créés. Une fois la solution mise en place, j’ai modifié les tableaux de bords existants sur le Kibana afin de supprimer les éléments non supportés ou nécessaires.</p>
+      <p>Finalement, j’ai rédigé deux documentations afin que d’autres membres de l’équipe « Infrastructure & Cloud Operations » puissent prendre en main l’outil :</p>
+
+      <ul>
+        <li>La première est un DAT (Document d’Architecture Technique) : elle retrace la création du projet, les benchmarks réalisés, un schéma de l’infrastructure interne du collecteur, ainsi que les éléments de configuration par défaut du collecteur et des pares-feux.</li>
+        <li>La seconde est un DEX (Document d’Exploitation) : elle contient toutes les informations relatives à l’utilisation du collecteur, de la connexion au Kibana à la procédure de mise à jour de la stack.</li>
+      </ul>
+
+      <h3>Résultats</h3>
+      <p>Le projet a été considéré un succès par le client et mon tuteur de formation. Ce projet a permis au datacenter de se doter d’une solution de collecte NetFlow à coût réduit, fiable (aucun incident majeur relevé sur une année) et adaptée à nos besoins. Actuellement, le collecteur est toujours utilisé afin de corréler des informations venant de nos pares-feux internes.</p>
+      <p>Personnellement, ce projet est le premier projet de grande envergure que j’ai réalisé seul pendant mon alternance. C’est aussi grâce à ce projet et aux dossier projet réalisé au cours de mon alternance que j’ai pu valider mon Bachelor Administrateur d’Infrastructures Sécurisées et poursuivre mon alternance en Master Expert en ingénierie des systèmes d’information.</p>
+
+      <h3>Lendemains du projet</h3>
+      <p>Bien que le projet soit terminé, nous avons décidé de consacrer un temps supplémentaire à l’amélioration du collecteur. Certains petits problèmes sont remontés avec l’utilisation de l’outil, notamment au niveau des tableaux de bord, et ont été résolus rapidement. Nous avons aussi décidé de rajouter plus de pares-feux au collecteur, avec les pares-feux protégeant les applications web client. La configuration des exportateurs de flux NetFlow a été réalisé en début 2025. Un projet d’ajout des pares-feux internes au collecteur est en cours, mais de par sa basse priorité, il est à l’arrêt, supplanté par les projets majeurs du datacenter.</p>
+
+      <h3>Regard critique</h3>
+      <p>Ce projet reste, en 2025, le projet le plus imposant que j’ai pu réaliser seul en entreprise. Mes compétences techniques et humaines se sont fortement renforcées au cours des sept mois de ce projet, et j’ai pu m’exercer à tous les niveaux d’un datacenter, ce que je n’ai jamais pu faire pendant mes projets étudiants. Grâce à ce projet, j’ai pu m’intégrer dans l’équipe « Infrastructure & Cloud Operations » de Berger-Levrault et m’épanouir dans un environnement que je venais à peine de découvrir. Je suis extrêmement reconnaissant envers toutes les équipes de Berger-Levrault qui m’ont apporté tout le soutien et les compétences nécessaires à la bonne réalisation de ce projet.</p>
+    `
+  },
+  4: {
+    title: "MCO d'un datacenter",
+    icon: SVGIcons.server,
+    desc: "Réalisation du Maintien en Condition Opérationnelle d'un datacenter certifié HDS et ISO 27001.",
+    relatedSkills: [
+      { type: 'techniques', id: 1 },
+      { type: 'techniques', id: 2 },
+      { type: 'techniques', id: 3 },
+      { type: 'techniques', id: 4 },
+      { type: 'humaines', id: 1 },
+      { type: 'humaines', id: 4 },
+      { type: 'humaines', id: 5 }
+    ],
+    fullContent: `
+      <h3>Avant-propos</h3>
+      <p>Cette réalisation a été réalisée dans le cadre d’un environnement de datacenter. Certaines informations ont été volontairement supprimées afin de préserver la confidentialité des individus et des technologies employés sur le datacenter.</p>
+
+      <h3>Introduction</h3>
+      <p>Dans le cadre de mon Bachelor Administrateur d’Infrastructures Sécurisées à INTECH Agen devenu ESIEA débuté en septembre 2021, j’ai travaillé pendant un an en alternance en tant qu’Administrateur d’Infrastructures pour le compte de l’entreprise <a href="https://www.berger-levrault.com/fr">Berger-Levrault.</a></p>
+      <p>Le groupe Berger-Levrault est une entreprise spécialisée dans l’édition de solutions logicielles SaaS (Software as a Service) pour les collectivités françaises, les établissements sanitaires, sociaux et médico-sociaux, ainsi que de l’hébergement libre IaaS (Infrastructure as a Service).</p>
+      <p>J’ai intégré l’entreprise an tant qu’Administrateur d’Infrastructures sur le datacenter principal du groupe. Mon métier consiste à assurer le Maintien en Condition Opérationnelle (MCO) du datacenter. La MCO est la liste des opérations prises afin de garantir le bon fonctionnement de l’infrastructure en place, ainsi que son évolution dans le temps.
+
+      <h3>Objectifs</h3>
+      <p>Cette réalisation a été mise en place au cours d’une alternance d’une durée de trois ans. De nombreux objectifs, à la fois humains et techniques, étaient attendus.</p>
+      <p>Humainement, j’ai pu développer mes compétences relationnelles avec les différentes équipes de Berger-Levrault, ainsi qu’avec des clients et prestataires. L’équipe dont je faisais partie était l’équipe « Infrastructure & Cloud Operations », et est répartie sur plusieurs sites, ce qui rendait plus compliqué le transfert d’informations et la communication avec certains collègues.</p>
+      <p>Techniquement, l’objectif était divisé en trois parties : la première consistait en la maîtrise de l’infrastructure du datacenter. Le datacenter étant d’une taille et d’une complexité plutôt importante, il m’a fallu comprendre le rôle de chaque zone de l’infrastructure, ainsi que les différents équipements utilisés. La seconde partie était d’être capable d’administrer les différents équipements afin de les maintenir en fonctionnement et gérer leur obsolescence. La dernière partie était d’être capable d’identifier et résoudre différents problèmes à l’échelle du datacenter. Cela signifie de traiter les différents incidents ou arrêts de production liés à l’infrastructure du site, ainsi que d’intégrer les équipes de support de niveau 3.</p>
+
+      <h3>Contexte humain</h3>
+      <p>L’organisation des effectifs des équipes informatiques de Berger-Levrault a évolué tout au long de mon alternance. Les équipes sont réparties en Business Units (BU), qui sont basées sur un axe majeur du groupe, comme une catégorie de produits. L’équipe « Infrastructure & Cloud Operations » dont je suis membre fait partie de la Business Unit « Technologie ». Cette BU gère tous les hébergements du groupe, les interconnexions entre les sites physiques, et d’autres.</p>
+      <p>Mon équipe est présente sur trois sites différents, et est séparée en deux groupes majeurs : le premier est l’équipe « SRO - Delivery », qui gère le déploiement de nouvelles machines d’administration et client. Le second est l’équipe « Infra Engineering », qui gère les hébergements. Les deux groupes se chargent aussi du support au niveau infrastructure, à un niveau N2 pour le groupe SRO - Delivery et N3 pour le groupe Infra Engineering.</p>
+      <p>En tant que membre du groupe Infra Engineering, j’ai fréquemment l’occasion d’échanger avec des clients de Berger-Levrault. Les échanges peuvent être directs ou indirects et se réaliser par e-mail ou en visioconférence, et dans de très rares cas en physique. J’ai aussi eu souvent l’occasion de communiquer avec les équipes des chefs de projets, du support et de la livraison des applicatifs, et des développeurs de la BU « Médico-social », qui étaient basés sur le même site.</p>
+      <p>Des échanges réguliers ont aussi eu lieu avec les membres de l’équipe « Cybersécurité », notamment dans la transmission de vulnérabilités.</p>
+
+      <h3>Contexte technique</h3>
+      <p>Pour des raisons de confidentialité, je ne pourrais pas détailler ici l’infrastructure du datacenter, mais je peux dire que c’est une infrastructure complexe hébergeant plusieurs gammes de produits Berger-Levrault. Ces produits sont mis en place de manière isolée, et totalisent des centaines de machines, ainsi que de nombreux pares-feux et autres solutions de sécurité, des infrastructures virtualisées, de sauvegarde et de connexion à l’Internet.</p>
+      <p>J’ai donc eu l’occasion de travailler sur un nombre important de technologies, et de diversifier mes compétences sur les trois ans de mon alternance.</p>
+
+      <h3>Enjeux</h3>
+      <p>Dans cette réalisation, les enjeux étaient la satisfaction des clients, le maintien de niveaux de disponibilité hauts et le respect des normes d’hébergement de données.</p>
+      <p>La satisfaction des clients est un enjeu majeur en entreprise. En tant que membre d’une équipe intervenant sur des demandes de support de niveau N3, je suis amené à devoir diagnostiquer et résoudre des incidents complexes, entraînant des dégradations ou des interruptions de service sur des produits importants utilisés par des établissements médicaux. La résolution rapide de ces incidents est l’un des facteurs influençant positivement la satisfaction des clients, et permet de renforcer les partenariats entre eux et Berger-Levrault.</p>
+      <p>Un autre enjeu est de maintenir des niveaux de disponibilités élevés. Lors de la signature des contrats des produits Berger-Levrault, un niveau de disponibilité annuel est inclus, ainsi que des garanties quant au temps de prise en charge et de résolution des incidents, ce qu’on appelle des SLA (Service Level Agreement). Il est critique que ces SLA soient respectés, car ils sont un gage de confiance pour un client (par exemple, une disponibilité de 99,98% signifie une interruption de service de seulement 1h35min par an).</p>
+
+      <h3>Risques</h3>
+      <p>Le risque principal rencontré au cours du projet était de créer une interruption de service sur des machines clientes en cas de mauvaise manipulation. Le Maintien en Condition Opérationnelle regroupe de nombreuses opérations (certaines seront décrites dans la partie « Réalisations ») visant à faire évoluer l’infrastructure du datacenter dans le temps. Certaines des opérations les plus risquées sont le remplaçant des machines, réseaux ou équipements entiers, souvent à des fins de lutte contre l’obsolescence ou contre les vulnérabilités. Des interruptions de service peuvent être nécessaires, mais elles sont planifiées pendant des heures creuses ou non ouvrées avec le client afin d’impacter le moins d’utilisateurs possible. Cependant, une opération de routine peut, en cas de mauvaise manipulation, entraîner une interruption de service imprévue. Cela pourrait impacter la satisfaction des clients, ainsi que dépasser les SLA inclus dans les contrats, ce qui pourrait causer des pertes financières ainsi qu’une perte de confiance des clients envers Berger-Levrault.</p>
+
+      <h3>Organisation</h3>
+      <p>Pendant mon alternance, de nombreuses réunions récurrentes ont lieu afin d’organiser les différentes tâches à réaliser. L’une d’entre elles est une réunion hebdomadaire qui a lieu tous les lundis matin, avec mon manager, mon maître de formation et un ingénieur systèmes et réseaux qui travaille sur le datacenter. Dans cette réunion, nous échangeons sur les tâches à réaliser pendant la semaine, ainsi que sur les possibles évènements qui ont pu se dérouler pendant le weekend. Une autre réunion suit cette dernière, cette fois avec certains membres de l’équipe Delivery, mais aussi avec des développeurs, des membres des équipes de support logiciel, et autres. Cette réunion nous permet de savoir les différentes opérations en cours sur le datacenter, comme par exemple la mise en place de nouveaux environnements clients ou un futur audit sur un produit hébergé. Une troisième réunion est organisée toutes les deux semaines par mon manager. Cette réunion permet d’informer l’équipe des différentes décisions prises par les échelons supérieurs de la BU Technologie, ainsi que des nouvelles venant du Comité Exécutif de Berger-Levrault.</p>
+
+      <h3>Travail réalisé</h3>
+      <p>Pour cette réalisation, je vais présenter trois opérations que j’ai réalisé dans le cadre global de la MCO du datacenter.</p>
+
+      <h4>1. Ouverture de flux et gestion des accès</h4>
+      <p>Le datacenter est souvent amené à réaliser des audits de sécurité sur différents produits hébergés, ou des opérations sur une partie de l’infrastructure, afin d’être conforme aux normes ISO 27001 et HDS. Bien que ces audits soient organisés par d’autres équipes que la mienne, nous sommes souvent consultés puisque des flux doivent être ouverts aux prestataires. Ces ouvertures de flux se font sous la forme de demandes internes dans notre outil de ticketing. Ces derniers sont automatiquement catégorisés comme étant de niveau N3 et transférés à notre équipe puisqu’elles concernent une gestion des accès.</p>
+      <p>Lorsque je prends en charge une de ces demandes, je commence par créer des comptes utilisateurs sur un serveur Active Directory spécifique. Cet AD est lié à un portail VPN SSL, qui permet aux prestataires, ainsi qu’à certains clients et collaborateurs hors-site de Berger-Levrault de se connecter soit à une machine de rebond, soit directement à des serveurs via une connexion SSH ou RDP. J’ajoute ensuite un nouveau groupe utilisateur dans le portail VPN SSL, qui est lié au groupe de sécurité créé dans l’AD. Je crée aussi une règle liant le groupe utilisateur à des connexions SSH ou RDP vers une ou plusieurs machines. Dans le cas d’un prestataire, c’est une machine de rebond qui leur est dédiée. Je configure ensuite un compte sur une solution d’authentification à deux étapes (2FA), afin de sécuriser l’accès. Ce dernier est lui aussi lié au même AD que le portail VPN SSL. Je finis par ouvrir les flux nécessaires entre la machine de rebond et le serveur visé par l’audit ou l’opération. Ces flux peuvent passer par plusieurs pares-feux, donc il est important que je reste organisé pour ne pas avoir d’incident de production ou de mauvais flux d’ouvert. Finalement, j’envoie un e-mail au prestataire avec son mot de passe de compte sous le format d’un lien sécurisé, ainsi qu’avec la documentation pour se connecter au portail VPN SSL. Un e-mail d’activation de la 2FA est envoyé automatiquement au bout de douze heures. Quelques jours suivant la création des accès, je réalise une visioconférence avec le prestataire pour tester les accès en direct et répondre à ses questions.</p>
+
+      <h4>2. Mise à jour d’équipements</h4>
+      <p>La lutte contre l’obsolescence est extrêmement importante. Un équipement non mis à jour peut contenir des vulnérabilités susceptibles de causer un incident de sécurité majeur au niveau du datacenter. Il est aussi possible qu’un équipement obsolète cause des problèmes de compatibilité avec d’autres machines ou logiciels. Un équipement physique qui est proche de sa fin de vie peut subir des pannes de manière plus fréquente qu’un équipement plus récent, et aussi causer une dégradation ou interruption de service.</p>
+      <p>Tout au long de mon alternance, j’ai participé ou réalisé la mise à jour des équipements du datacenter, ainsi que de certaines machines. J’ai par exemple recréé notre serveur de supervision Zabbix de l’infrastructure car les machines Ubuntu le composant étaient proche de leur date d’arrêt des mises à jour. J’ai demandé à l’équipe Delivery de créer deux machines avec un système d’exploitation Ubuntu plus récent, puis j’ai installé Zabbix et le système de base de données PostgreSQL dans les mêmes versions que le serveur en production. J’ai ensuite organisé une migration des données vers le nouveau serveur et une mise à jour de Zabbix et PostgreSQL vers des versions récentes. Cette migration avait pour impact principal d’interrompre l’utilisation de l’interface de supervision, donc le temps d’interruption devait être minime, et aussi avoir lieu pendant des heures creuses afin d’impacter le moins possible les équipes.</p>
+      <p>J’ai aussi pu réaliser des mises à jour sur les équipements de sécurité et de sauvegarde du datacenter. Les équipements de sécurité, tels que des pares-feux, ont demandé une grande organisation afin de causer le moins de désagréments possible pour les clients et les équipes travaillant sur le datacenter. Les mises à jour des pares-feux ne causent que peu de perturbations grâce à leur disposition en clusters, assurant une continuité de service. Un autre équipement que j’ai pu mettre à jour est l’équipement permettant les sauvegardes et l’externalisation de ces dernières sur des sites distants. En suivant les recommandations du manufacturier, j’ai réalisé une mise à jour de l’équipement physique dans le datacenter et des équipements sur les sites distants deux fois par an pour changer de version majeure. Pour ces mises à jour, je décidais d’ouvrir un ticket chez le manufacturier afin d’avoir un ingénieur de disponible au moment de la mise à jour. Cela nous permettait, en cas de problème lors de la mise à jour, de pouvoir directement le remonter à une personne compétente et de commencer les opérations de rétablissement au plus vite.</p>
+
+      <h4>3. Remplacement de PDU</h4>
+      <p>Dans le cadre de la lutte contre l’obsolescence, j’ai pu réaliser un mini-projet pendant environ six mois. Un type d’équipement qui est sujet à l’obsolescence mais qui est souvent oublié est les PDU (Power Distribution Unit). Ce sont les équipements permettant l’alimentation en électricité des différents équipements présent dans les racks d’un datacenter. Si ces PDU tombent en panne, cela peut couper l’alimentation à des serveurs et entraîner une interruption de service sévère.</p>
+      <p>J’ai commencé par mettre en place un PDU à des fins de test. Je l’ai utilisé pour découvrir comment configurer la carte réseau, les envois de logs à un serveur Syslog, et la gestion des flux SNMP vers la supervision. Lorsque la configuration globale du PDU est devenue satisfaisante, j’ai fait un plan de tous les racks du datacenter. Dans ce plan, j’ai noté tous les serveurs de chaque rack, en mentionnant sur quel PDU ils sont branchés. J’ai aussi noté si les PDU existants seraient faciles à retirer du rack ou non, et si la place derrière le rack permet une installation facile du PDU. J’ai ensuite réalisé une procédure pour le remplacement des PDU, avant d’organiser un planning de remplacement sur six mois. Au rythme de deux racks par semaine, puis un par semaine à partir de la reprise des cours, j’ai remplacé l’intégralité des PDU du datacenter avec mon maître de formation. J’ai commencé par des racks avec des équipements entièrement redondés, afin de ne pas causer d’arrêt de service sur les premières opérations en cas de mauvaise manipulation. Une fois les racks redondés effectués, j’ai réalisé les opérations des racks non redondés. Cela a entraîné une communication aux clients, puisque certains d’entre eux possèdent des équipements permettant l’interconnexion entre le datacenter et leurs sites (comme des accès à une grappe MPLS par exemple).</p>
+      <p>Au final, tous les PDU ont été remplacés. Aucun incident de production imprévu n’a été noté lors des opérations.</p>
+
+      <h3>Lendemains du projet</h3>
+      <p>La MCO d’un datacenter ne se termine jamais. Au fur et à mesure, il y a toujours des équipements approchant leur fin de vie, de nouvelles mises à jour poussées pour des logiciels, et de nouveaux flux à ouvrir et à refermer. C’est une tâche liée au cycle de vie du datacenter.</p>
+
+      <h3>Regard critique</h3>
+      <p>Je retiendrai de cette alternance la grande satisfaction d’avoir pu travailler sur une infrastructure si complexe et passionnante. La grande variété de technologies et de situations m’auront permis de renforcer fortement mes connaissances techniques et humaines. J’ai pu rapidement m’intégrer au sein de l’équipe Infrastructure & Cloud Operations de l’entreprise et m’épanouir dans un environnement que je venais à peine de découvrir. Je suis extrêmement reconnaissant envers toutes les équipes de Berger-Levrault qui m’ont apporté tout le soutien et les compétences nécessaires en matière d’administration systèmes et réseaux, de cybersécurité et de relation client.</p>
+      `
+  },
+  5: {
+    title: "Déploiement de supervision automatisé",
+    icon: SVGIcons.automation,
+    desc: "Déploiement d'une solution de supervision avec Ansible.",
+    relatedSkills: [
+      { type: 'techniques', id: 2 },
+      { type: 'techniques', id: 3 },
+      { type: 'humaines', id: 1 },
+      { type: 'humaines', id: 3 }
+    ],
+    fullContent: `
+      <h3>Introduction</h3>
+      <p>Dans le cadre de mon Bachelor Administrateur d’Infrastructures Sécurisées à INTECH Agen devenu ESIEA débuté en septembre 2021, j’ai travaillé pendant un an en alternance en tant qu’Administrateur d’Infrastructures pour le compte de l’entreprise <a href="https://www.berger-levrault.com/fr">Berger-Levrault.</a></p>
+      <p>Le groupe Berger-Levrault est une entreprise spécialisée dans l’édition de solutions logicielles SaaS (Software as a Service) pour les collectivités françaises, les établissements sanitaires, sociaux et médico-sociaux, ainsi que de l’hébergement libre IaaS (Infrastructure as a Service).</p>
+      <p>J’ai intégré l’entreprise an tant qu’Administrateur d’Infrastructures sur le datacenter principal du groupe. Mon métier consiste à assurer le Maintien en Condition Opérationnelle (MCO) du datacenter. Cela, dans certains cas, pouvait se traduire par des grands projets de mise en place ou de migration d’outils ou d’équipements.</p>
+
+      <h3>Objectifs</h3>
+      <p>L’objectif principal de ce projet était de remplacer des solutions de supervision obsolètes sur le datacenter. Une supervision obsolète, c’est des failles de sécurité qui peuvent apparaître à tout moment sur un équipement critique d’une infrastructure. C’est aussi des données possiblement manquantes, car une infrastructure complexe évolue sans cesse, et une machine ajoutée ou supprimée demande une action dans la supervision pour collecter les métriques ou éviter de remonter des alertes logiques.</p>
+
+      <h3>Contexte humain</h3>
+      <p>Ce projet était le premier que je réalise où je collabore avec des équipes qui n’étaient pas sur le même site que moi. J’ai aussi eu l’occasion de travailler avec de nombreuses équipes différentes, telles que l’équipe Automatisation, l’équipe des chefs de projet, ainsi que des techniciens travaillant sur l’outil que nous allions mettre en place.</p>
+      <p>Ce projet est aussi spécial car j’ai dû le prendre en cours de route. Originellement, c’était mon maître de formation qui devait s’en occuper, et qui a réalisé une infrastructure de Proof of Concept (POC). Cependant, à la suite de son départ de l’entreprise en décembre 2024, j’ai dû prendre le relais et m’intégrer immédiatement avec les équipes pour réaliser les déploiements de production.</p>
+
+      <h3>Contexte technique</h3>
+      <p>Sur le datacenter, les machines clientes étaient supervisées par plusieurs systèmes de supervision. Le premier était un serveur Zabbix hébergé sur une machine Ubuntu 20.04 supervisant la majorité des machines. Le deuxième est un serveur Nagios obsolète depuis des années, qui servait à superviser une gamme de produit migré en dehors du datacenter depuis des années. Le dernier était une supervision RG System, qui était plutôt couteux et arrivait proche de sa date d’obsolescence. Il fallait donc un nouveau système de supervision, permettant de centraliser le rôle des trois outils originaux, et de réduire les coûts.</p>
+      <p>L’outil utilisé pour remplacer la supervision des machines clientes était la plateforme Dynatrace. <a href="https://www.dynatrace.com/">Dynatrace</a> est une entreprise américaine fondé en 2005 et est spécialisée dans l’édition de logiciels d’observabilité des infrastructures et applicatifs. Le Dynatrace Hub est une plateforme disponible en SaaS, permettant de réaliser de la supervision de machines, applicatifs et infrastructures, ainsi que de réaliser des dashboards via des extensions téléchargeables. Combiné à l’agent de supervision OneAgent, à installer sur des machines Windows et Linux, la plateforme Dynatrace est capable de collecter des métriques de performance, découvrir les différents processus en cours et leurs états, et s’intégrer aux outils de gestion des incidents pour automatiser la création de tickets. Elle permet également de créer des dashboards permettant d’afficher des KPI (Key Performance Indicators) pour les managers des différentes Business Units.</p>
+
+      <h3>Enjeux</h3>
+      <p>Dans ce projet, les enjeux étaient multiples. Du côté technique, l’enjeu principal était de simplifier l’accès aux informations de supervision à l’échelle du groupe. Certaines gammes de produits hébergé sur un datacenter pouvait rentrer dans le giron des employés travaillant sur un site différent. Ouvrir des flux vers différents sites pouvait vite devenir un cauchemar. L’utilisation d’une plateforme SaaS, avec toutes les métriques directement envoyées dessus permet de simplifier les accès des employés, car il ne suffisait plus qu’à lier leur compte AD d’entreprise pour qu’ils aient accès aux données.</p>
+      <p>L’autre enjeu majeur était l’amélioration de la sécurité. Puisque des employés extérieurs au datacenter devaient se connecter aux outils de supervision hébergés en interne, cela entraînait des ouvertures de flux nombreuses, les plus anciennes étant obsolètes et parfois intraçables à cause d’une mauvaise documentation des demandes de flux. L’implémentation d’une supervision en SaaS réduit le nombre de flux ouverts sur les pares-feux. De plus, la suppression de systèmes d’exploitation obsolètes réduit les vulnérabilités présentes sur le datacenter.</p>
+
+      <h3>Risques</h3>
+      <p>Dans le cadre de ce projet, le risque principal était de causer des perturbations ou même une interruption de service lors des différents déploiements des agents. Le datacenter possède une grande variété de machines clients, avec différents applicatifs et systèmes d’exploitation présents. Les POC réalisés ont pu vérifier la compatibilité de l’agent avec différents systèmes d’exploitation, mais une part d’incertitude restait présente pendant le projet. Puisque les déploiements se faisaient pendant des heures ouvrées, un incident encourrait le risque d’interrompre le service des différents clients utilisant une gamme de produits. Les clients étant en majorité des établissements médicaux et médico-sociaux, cela renforçait le caractère critique d’un incident possible.</p>
+
+      <h3>Organisation</h3>
+      <p>Lors de ce projet, l’organisation était gérée par un chef de projet engagé en tant que prestataire. Il a décidé d’organiser des sessions de travail appelés ateliers lors des phases initiales du projet, afin de rassembler les différentes parties prenantes pour élaborer le POC, ainsi que l’infrastructure finale. Une réunion hebdomadaire était aussi mise en place afin de discuter sur les actions réalisées lors de la semaine, ainsi que ce qu’il restait à faire.</p>
+
+      <h3>Étapes du projet</h3>
+      <p>Le projet a débuté sur plusieurs réunions avec les techniciens de Dynatrace. Mon ancien maître de formation, avec les architectes techniques, ont pu s’accorder sur une infrastructure à mettre en place. Ils ont décidé d’ajouter un nouvel outil de Dynatrace afin de simplifier l’ouverture des flux sur le datacenter : les ActiveGate. C’est un proxy permettant de centraliser l’envoi des métriques remontées par les agents OneAgent. En configurant les agents OneAgent pour qu’ils envoient leurs métriques aux ActiveGates, cela permet de réduire le nombre de flux ouverts sur les pares-feux du datacenter.</p>
+      <p>Le choix s’est porté sur l’implémentation de quatre ActiveGates : deux réservés aux machines de management et d’infrastructure, et deux réservés aux machines clientes. Les agents étant capables de choisir l’ActiveGate de leur choix, cela permet d’avoir une certaine redondance en cas de panne de l’un de ces derniers, ainsi que de séparer les flux des machines clientes de celles de management.</p>
+      <p>Deux serveurs de plus ont été créés, afin de servir non seulement aux déploiements des agents, mais aussi à l’automatisation du datacenter dans le futur. Ces serveurs Ubuntu 24.04 étaient dédiés à Ansible, qui est un outil d’automatisation. Comme pour les ActiveGates, nous faisions une distinction entre les machines de management et les machines clientes, qui avaient chacune leur serveur Ansible.</p>
+      <p>Un POC a ensuite été réalisé. Il nous a permis de confirmer les choix techniques fait dans les premiers ateliers, ainsi que de tester la compatibilité des agents avec les différents systèmes d’exploitation présents sur le datacenter. Et en effet, il nous a permis d’apprendre que les agents n’étaient pas compatibles avec les serveurs Windows Server 2008 et 2012, ainsi que les CentOS 5. De plus, les serveurs CentOS 6 se sont montrés incompatibles avec une installation de l’agent avec Ansible. Cela est un problème, car beaucoup d’anciens serveurs du datacenter utilisent ce système d’exploitation.</p>
+      <p>C’est à la suite de ce POC que j’ai remplacé mon ancien maître de formation. Lors d’une réunion de préparation des déploiements de production, nous nous sommes décidés sur l’organisation des playbooks. Un playbook Ansible est un fichier .yaml qui permet de configurer le déploiement d’applications sur une ou plusieurs machines. Ici, nous utilisions Ansible afin de pousser la même configuration de l’agent sur les machines d’une même gamme de produits. Pour s’organiser sur les déploiements par gamme, nous avons utilisé un outil interne appelé VMOutput. C’est un fichier Excel généré tous les jours, contenant toutes les informations nécessaires sur les machines virtuelles présentes sur les infrastructures virtualisées VMware du groupe Berger-Levrault. Un export de ces informations via l’outil RVTools est combiné dans un script PowerShell à un fichier SharePoint rempli par les différentes Business Units du groupe. Certaines informations, telles qu’un identifiant de l’offre auquel la machine appartient, ou le nom du client sont ajoutées. Cela nous permet d’avoir un fichier combinant les configurations techniques des machines virtuelles, tout en ayant les informations des BU pour organiser les déploiements.</p>
+      <p>Nous avons planifié les déploiements un mois en avance. Cela nous laissait le temps de prévenir les différentes BU pour que les équipes puissent réaliser les communications aux clients. Le déploiement de l’agent ne causait pas de perturbations sur les activités clients lors du POC, nous avons souhaité tout de même réaliser une communication afin de les prévenir si quelque chose venait à se passer. Les déploiements étaient organisés les lundis, mardis, et plus rarement les jeudis en début d’après-midi. Chacune de ces réunions servait au déploiement de l’agent OneAgent sur environ une vingtaine de machines maximum. Pour des gammes de produits plus petites, nous avons fait le choix de les combiner pour gagner du temps. Pour les gammes les plus importantes, nous réalisions les déploiements par lots, souvent triés par système d’exploitation.</p>
+      <p>Dans l’ensemble, les déploiements, qui se sont déroulés de janvier à avril 2025, n’ont pas causé d’interruption majeure, sauf pour une gamme de produits. En février, lors du déploiement de l’agent sur des machines du produit ATAL, qui est un logiciel de gestion des services techniques pour les collectivités françaises, un incident s’est produit. Sur la douzaine de machines Windows Server 2016 du produit, cinq ne répondaient plus après l’installation de l’agent OneAgent. Après une demi-heure de troubleshooting, nous avons décidé de réaliser un rollback, afin de restaurer l’accès au produit pour les clients. Dans la foulée, j’ai été chargé de mener l’enquête de ces interruptions de service. J’ai cloné les machines incriminées et je les ai isolées derrière un pare-feu de remédiation. Ce pare-feu PFSense me permettait de garder la configuration réseau des machines, tout en évitant qu’elles communiquent avec l’extérieur. Je pouvais alors me connecter à elles via une console d’administration dédiée à cet effet, sans opérer de manipulation sur la production. J’ai ensuite essayé à plusieurs reprises de réinstaller l’agent OneAgent sur les machines manuellement, puis avec Ansible. À chaque fois, les machines ne répondaient plus, et certaines redevenaient disponibles après un redémarrage. Avec l’aide du support Dynatrace, j’ai pu extraire les logs système et de l’agent lors de l’installation, afin de déterminer la cause de l’incident.</p>
+      <p>Nous avons découvert que l’un des pilotes intégrés au fichier d’installation de l’agent, dont le rôle était de remonter les métriques de la carte réseau des machines virtuelles Windows, causait une erreur d’incompatibilité. Le support m’a conseillé de tester une installation de l’agent avec une configuration choisissant un autre pilote, qui était utilisé dans des versions plus anciennes de OneAgent. Selon eux, il était possible que le pilote soit trop récent pour le système d’exploitation. Après un test sur toutes les machines clonées, l’installation s’est déroulée sans problème. La semaine suivante, un second déploiement a été organisé sur toutes les machines ATAL, en utilisant l’ancien pilote dans la configuration. Aucun problème n’avait été détecté, ce qui nous a permis de reprendre les déploiements sur les machines Windows Server 2016. Ce qui nous a surpris le plus, c’est que l’incident ne s’était pas déclaré pendant le POC, malgré le test sur des machines Windows Server 2016, mais que nous n’avions plus détecté le problème sur le restant du parc informatique, dont plus d’une centaine de machines utilisaient ce système d’exploitation.</p>
+
+      <h3>Lendemains du projet</h3>
+      <p>Ce projet s’est terminé pendant l’été 2025 avec la finalisation des déploiements sur d’autres datacenters. Ce projet a permis de simplifier les accès au datacenter, puisque nous n’avions plus de demandes intempestives des autres sites de Berger-Levrault demandant un nouvel accès à la supervision client, ni de demandes de création de compte sur cette dernière. L’infrastructure mise en place s’est montrée très résiliente, avec aucun incident remonté depuis la fin du projet. Les différents composants de la supervision initiale sont en cours d’arrêt ou déjà supprimé, avec uniquement le serveur Zabbix rarement utilisé par mon équipe afin d’obtenir une première idée sur la cause d’un problème sur une machine client.</p>
+
+      <h3>Regard critique</h3>
+      <p>Ce projet était particulier puisque j’ai dû rejoindre l’équipe en cours de route. Cela m’a demandé de faire face à de nombreux challenges, notamment de m’intégrer dans un groupe composé de personnes de plusieurs équipes et réparties sur différents sites physiques. J’ai pu découvrir la suite Dynatrace et ses différents composants, ainsi que renforcer mes compétences sur Ansible et dans la résolution d’incidents complexes. Je suis très heureux du résultat du projet et d’avoir pu assurer sa réussite.</p>
+    `
+  }
 };
 
 const skillData = {
@@ -489,8 +745,9 @@ const skillData = {
 // Content Fragments
 const homeContent = `
   <div class="hero">
-    <h1 class="fade-in">EXPERT EN INGÉNIERIE DES SYSTÈMES D'INFORMATION</h1>
-    <p class="fade-in" style="animation-delay: 0.2s">Bienvenue sur mon portfolio digital.</p>
+    <div class="hero-name fade-in">Nicolas CLUZEAU</div>
+    <h1 class="fade-in" style="animation-delay: 0.1s">EXPERT EN INGÉNIERIE DES SYSTÈMES D'INFORMATION</h1>
+    <p class="fade-in" style="animation-delay: 0.3s">Bienvenue sur mon portfolio digital.</p>
     <div class="hero-btns fade-in" style="animation-delay: 0.4s">
       <a href="#/presentation" class="btn btn-secondary">Ma Présentation</a>
       <a href="#/realisations" class="btn btn-primary">Mes Réalisations</a>
@@ -643,9 +900,10 @@ const competencesHomeContent = `
 `;
 
 const contactContent = `
-  <h1>Me Contacter</h1>
-  <div class="glass" style="padding: 3rem; display: flex; flex-direction: column; gap: 2rem; max-width: 600px; margin: 2rem auto; text-align: center;">
-    <p>Vous avez un projet ou une opportunité ? N'hésitez pas à me joindre via les canaux ci-dessous :</p>
+  <div class="contact-container" style="margin-top: -2rem;">
+    <h1>Contact</h1>
+    <div class="glass" style="padding: 3rem; display: flex; flex-direction: column; gap: 2rem; max-width: 600px; margin: 1rem auto; text-align: center;">
+    <p>Afin de rentrer en contact avec moi n'hésitez pas à m'envoyer un e-mail ou à consulter mon profil LinkedIn :</p>
     
     <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
       <a href="mailto:cluzeau@et.esiea.fr" class="contact-link" style="font-size: 1.25rem; text-decoration: none; color: var(--primary); font-weight: 600;">
@@ -672,15 +930,33 @@ const routes = {
 
 // Sub-pages with personalized content
 Object.entries(projectData).forEach(([id, data]) => {
+  const relatedSkillsHTML = data.relatedSkills ? `
+    <div class="related-skills">
+      <h3>Compétences rattachées</h3>
+      <div class="skills-chips">
+        ${data.relatedSkills.map(s => {
+    const skill = skillData[s.type][s.id];
+    if (!skill) return '';
+    return `<a href="#/competences/${s.type}/${s.id}" class="skill-chip skill-chip-${s.type} glass">
+            <span class="chip-icon">${skill.icon}</span>
+            ${skill.title}
+          </a>`;
+  }).join('')}
+      </div>
+    </div>
+  ` : '';
+
   routes[`/realisations/${id}`] = {
     title: data.title,
     content: `
       <div class="realisation-centered">
+        <span class="hero-icon">${data.icon}</span>
         <h1>${data.title}</h1>
         <div class="glass" style="padding: 3rem; margin-top: 2rem;">
           <div class="detailed-content">
             ${data.fullContent || `<p>${data.desc}</p>`}
           </div>
+          ${relatedSkillsHTML}
           <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
             <a href="#/realisations" style="color: var(--primary); text-decoration: none; font-weight: 600;">← Retour aux réalisations</a>
           </div>
@@ -695,6 +971,7 @@ Object.entries(skillData.techniques).forEach(([id, data]) => {
     title: data.title,
     content: `
       <div class="realisation-centered">
+        <span class="hero-icon">${data.icon}</span>
         <h1>${data.title}</h1>
         <div class="glass" style="padding: 3rem; margin-top: 2rem;">
           <div class="detailed-content">
@@ -714,6 +991,7 @@ Object.entries(skillData.humaines).forEach(([id, data]) => {
     title: data.title,
     content: `
       <div class="realisation-centered">
+        <span class="hero-icon">${data.icon}</span>
         <h1>${data.title}</h1>
         <div class="glass" style="padding: 3rem; margin-top: 2rem;">
           <div class="detailed-content">
@@ -735,7 +1013,7 @@ const render = () => {
   document.title = `${route.title} | Portfolio`;
 
   app.innerHTML = `
-    ${Navigation(projectData, skillData)}
+    ${Navigation(projectData, skillData, SVGIcons)}
     <main>
       <div class="container fade-in">
         ${route.content}
@@ -745,42 +1023,43 @@ const render = () => {
   `;
   window.scrollTo(0, 0);
 
-  // Setup mobile toggle after render
-  const toggle = document.querySelector('.mobile-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  // Sidebar & Mobile Drawer Logic
+  const sidebarNav = document.querySelector('.sidebar-nav');
+  const mobileToggle = document.querySelector('.mobile-toggle-sidebar');
+  const navLinksVertical = document.querySelector('.nav-links-vertical');
 
-  if (toggle) {
-    toggle.onclick = () => {
-      toggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
+  if (mobileToggle) {
+    mobileToggle.onclick = () => {
+      mobileToggle.classList.toggle('active');
+      navLinksVertical.classList.toggle('active');
     };
   }
 
-  // Handle Accordion on Mobile
-  document.querySelectorAll('.nav-item, .dropdown-item').forEach(item => {
-    const link = item.querySelector(':scope > a');
-    const dropdown = item.querySelector(':scope > .dropdown, :scope > .nested-dropdown');
+  // Handle Mobile Drawer Accordion
+  document.querySelectorAll('.nav-item-vertical').forEach(item => {
+    const link = item.querySelector('.nav-icon-link');
+    const drawer = item.querySelector('.nav-drawer');
 
-    if (dropdown && link) {
+    if (drawer && link) {
       link.onclick = (e) => {
-        // Only apply accordion on mobile
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1024) {
           e.preventDefault();
-          dropdown.classList.toggle('show');
-          link.classList.toggle('active-arrow');
+          // Close other drawers
+          document.querySelectorAll('.nav-item-vertical').forEach(other => {
+            if (other !== item) other.classList.remove('active');
+          });
+          item.classList.toggle('active');
         }
       };
     }
   });
 
   // Close menu on final link click
-  document.querySelectorAll('.dropdown-link:not(.has-nested), .nav-link:not(.has-dropdown)').forEach(link => {
-    // Note: I'll add classes to Navigation.js to distinguish these
-    link.onclick = (e) => {
-      if (!link.nextElementSibling?.classList.contains('dropdown') && !link.nextElementSibling?.classList.contains('nested-dropdown')) {
-        toggle?.classList.remove('active');
-        navLinks?.classList.remove('active');
-      }
+  document.querySelectorAll('.nav-link-final').forEach(link => {
+    link.onclick = () => {
+      mobileToggle?.classList.remove('active');
+      navLinksVertical?.classList.remove('active');
+      document.querySelectorAll('.nav-item-vertical').forEach(i => i.classList.remove('active'));
     };
   });
 };

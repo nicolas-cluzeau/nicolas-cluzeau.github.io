@@ -45,7 +45,7 @@ export const Footer = (projectData, skillData) => {
         </div>
         
         <div class="footer-bottom">
-          <p>&copy; ${new Date().getFullYear()} Nicolas Cluzeau. Tous droits réservés.</p>
+          <p>&copy; ${new Date().getFullYear()} Nicolas Cluzeau</p>
         </div>
       </div>
     </footer>
