@@ -742,6 +742,23 @@ const skillData = {
   }
 };
 
+const parcoursData = {
+  formations: [
+    { date: "Septembre 2024 - Juillet 2026", title: "Master Expert cybersécurité et infrastructures des systèmes d’information", institution: "ESIEA Agen" },
+    { date: "Septembre 2021 - Juillet 2024", title: "Bachelor AIS", institution: "ESIEA Agen" },
+  ],
+  experiences: [
+    { date: "Septembre 2024 - Août 2026", title: "Alternance Administrateur d'Infrastructures", company: "Berger-Levrault", desc: "Site de Villeneuve-sur-Lot (47300)" }
+  ],
+  certifications: [
+    { date: "Décembre 2025", title: "Cisco Network Security" },
+    { date: "Juillet 2025", title: "Cisco CyberOps Associate" },
+    { date: "2025", title: "Microsoft Security: Sécurité Windows" },
+    { date: "Octobre 2024", title: "CCNA : Switching, Routing, and Wireless Essentials" },
+    { date: "Janvier 2023", title: "CCNA : Introduction to Networks" }
+  ]
+};
+
 // Content Fragments
 const homeContent = `
   <div class="hero">
@@ -775,7 +792,7 @@ const homeContent = `
     <section class="home-section fade-in" style="animation-delay: 0.8s">
       <div class="section-header">
         <h2>Mes Compétences</h2>
-        <a href="#/competences" class="view-all-link">Détails des compétences →</a>
+        <a href="#/competences" class="view-all-link">Voir les détails →</a>
       </div>
       <div class="comp-home-grid">
         <div class="comp-home-col glass">
@@ -837,15 +854,55 @@ const presentationContent = `
 `;
 
 const parcoursContent = `
-  <h1>Mon Parcours</h1>
-  <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
-    <div class="glass" style="padding: 1.5rem;">
-      <h3>2022 - Présent</h3>
-      <p>ESIEA - Expertise en Ingénierie des Systèmes d'Information</p>
-    </div>
-    <div class="glass" style="padding: 1.5rem;">
-      <h3>2020 - 2022</h3>
-      <p>BTS SIO - Services Informatiques aux Organisations</p>
+  <div class="realisation-centered">
+    <h1>Mon Parcours</h1>
+    <p class="section-subtitle">Retrouvez ici les étapes clés de ma formation et de mon expérience professionnelle.</p>
+    
+    <div class="parcours-grid">
+      <div class="parcours-col glass">
+        <h3>${SVGIcons.automation} Formations</h3>
+        <div class="parcours-list">
+          ${parcoursData.formations.map(item => `
+            <div class="parcours-card glass">
+              <div class="parcours-logo-container">
+                <img src="/logos/Logo_ESIEA_2020.png" alt="ESIEA Logo" class="parcours-logo">
+              </div>
+              <span class="parcours-date">${item.date}</span>
+              <h4>${item.title}</h4>
+              <p>${item.institution}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="parcours-col glass">
+        <h3>${SVGIcons.briefcase} Alternance</h3>
+        <div class="parcours-list">
+          ${parcoursData.experiences.map(item => `
+            <div class="parcours-card glass">
+              <div class="parcours-logo-container">
+                <img src="/logos/Logo_BL_Header.svg" alt="Berger-Levrault Logo" class="parcours-logo">
+              </div>
+              <span class="parcours-date">${item.date}</span>
+              <h4>${item.title}</h4>
+              <p><strong>${item.company}</strong></p>
+              <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">${item.desc}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="parcours-col glass">
+        <h3>${SVGIcons.network} Certifications</h3>
+        <div class="parcours-list">
+          ${parcoursData.certifications.map(item => `
+            <div class="parcours-card glass">
+              <span class="parcours-date">${item.date}</span>
+              <h4>${item.title}</h4>
+            </div>
+          `).join('')}
+        </div>
+      </div>
     </div>
   </div>
 `;
