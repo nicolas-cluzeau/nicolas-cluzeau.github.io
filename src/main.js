@@ -744,16 +744,56 @@ const skillData = {
 
 const parcoursData = {
   formations: [
-    { date: "Septembre 2024 - Juillet 2026", title: "Master Expert cybersécurité et infrastructures des systèmes d’information", institution: "ESIEA Agen" },
-    { date: "Septembre 2021 - Juillet 2024", title: "Bachelor AIS", institution: "ESIEA Agen" },
+    {
+      id: "master",
+      date: "Septembre 2024 - Juillet 2026",
+      title: "Mastère Expert cybersécurité et infrastructures des systèmes d’information",
+      institution: "ESIEA Agen",
+      fullContent: `
+        <h3>Présentation</h3>
+        <p>À la suite de mon Bachelor AIS, j'ai choisi de rester au sein du Groupe ESIEA pour deux années de plus afin de compléter ma formation d'ingénieur avec un Mastère Expert en cybersécurité et infrastructures des systèmes d'information.</p>
+        
+        <h3>Ma vision de la pédagogie ESIEA</h3>
+        <p>J'ai apprécié la pédagogie mise en place pour ce Mastère, car les cours étaient réalisés en distanciel et intégraient souvent des intervenants extérieurs. De plus, au cours de ces deux années, nous avons pu bénéficier de cours sur des domaines tels que le juridique appliqué au monde de l'entreprise, un renforcement sur nos connaissances de la gestion de projet, ou encore le passage du TOEIC pour nous préparer au monde de demain, où les compétences transverses sont un vrai plus.</p>
+      `
+    },
+    {
+      id: "bachelor",
+      date: "Septembre 2021 - Juillet 2024",
+      title: "Bachelor AIS",
+      institution: "ESIEA Agen",
+      fullContent: `
+        <h3>Présentation</h3>
+        <p>Après avoir obtenu mon Baccalauréat Général, j'ai intégré le Groupe AEN au campus d'Agen (47000) pour réaliser trois années d'études. Cette école propose des formations d'ingénieurs sur cinq ans, ainsi que des Bachelors, Masters et autres formations spécialisées dans le domaine du numérique. Au début de ma troisième année, le Groupe AEN a été acquis par le Groupe ESIEA.</p>
+        
+        <h3>Ma vision de la pédagogie ESIEA</h3>
+        <p>J'ai beaucoup apprécié la pédagogie mise en place par l'ESIEA, qui se base sur des projets informatiques et de formation humaine. Ces projets nous ont permis de développer fortement nos compétences humaines car nous étions en contact avec de véritables clients comme en entreprise, ce qui m'a aidé lors de ma recherche d'alternance.</p>
+      `
+    },
   ],
   experiences: [
-    { date: "Septembre 2024 - Août 2026", title: "Alternance Administrateur d'Infrastructures", company: "Berger-Levrault", desc: "Site de Villeneuve-sur-Lot (47300)" }
+    {
+      id: "alternance-bl",
+      date: "Septembre 2024 - Août 2026",
+      title: "Alternance Administrateur d'Infrastructures",
+      company: "Berger-Levrault",
+      desc: "Site de Villeneuve-sur-Lot (47300)",
+      fullContent: `
+        <h3>Présentation</h3>
+        <p>Berger-Levrault est un groupe français spécialisé dans l'édition de logiciels à destination des professionnels du secteur public et privé. J'ai intégré cette entreprise dans le cadre d'une alternance d'une durée d'un an, puis étendue de deux années supplémentaires entre septembre 2023 et juillet 2026. J'ai effectué mes missions au sein de l'équipe Infrastructure & Cloud Operations en tant qu'Administrateur d'Infrastructures.</p>
+
+        <h3>Travail effectué</h3>
+        <p>Durant mon alternance, j'ai participé à la <a href="#/realisations/4">MCO du datacenter</a> de Villeneuve-sur-Lot (47300), qui héberge la partie médico-sociale du groupe. J'ai aussi pu réaliser divers projets tels que la <a href="#/realisations/3">conception d'un collecteur Netflow</a>, ou encore la <a href="#/realisations/5">mise en place d'une solution de supervision</a>.</p>
+        
+        <h3>Ma place dans l'entreprise</h3>
+        <p>J'ai su <a href="#/competences/humaines/2">m'intégrer à l'équipe Infrastructure & Cloud Operations</a>, et j'ai pu rapidement monter en compétence sur les différentes technologies utilisées par le groupe. Après trois ans, j'ai maîtrisé l'infrastructure réseau du datacenter, et j'ai ainsi pu réaliser de nombreuses tâches en <a href="#/competences/humaines/5">autonomie</a>.</p>
+      `
+    }
   ],
   certifications: [
     { date: "Décembre 2025", title: "Cisco Network Security" },
     { date: "Juillet 2025", title: "Cisco CyberOps Associate" },
-    { date: "2025", title: "Microsoft Security: Sécurité Windows" },
+    { date: "Juillet 2025", title: "Microsoft Security: Sécurité Windows" },
     { date: "Octobre 2024", title: "CCNA : Switching, Routing, and Wireless Essentials" },
     { date: "Janvier 2023", title: "CCNA : Introduction to Networks" }
   ]
@@ -863,14 +903,15 @@ const parcoursContent = `
         <h3>${SVGIcons.automation} Formations</h3>
         <div class="parcours-list">
           ${parcoursData.formations.map(item => `
-            <div class="parcours-card glass">
+            <a href="#/parcours/formations/${item.id}" class="parcours-card glass">
               <div class="parcours-logo-container">
                 <img src="/logos/Logo_ESIEA_2020.png" alt="ESIEA Logo" class="parcours-logo">
               </div>
               <span class="parcours-date">${item.date}</span>
               <h4>${item.title}</h4>
               <p>${item.institution}</p>
-            </div>
+              <div class="card-footer-tip">Voir les détails →</div>
+            </a>
           `).join('')}
         </div>
       </div>
@@ -879,7 +920,7 @@ const parcoursContent = `
         <h3>${SVGIcons.briefcase} Alternance</h3>
         <div class="parcours-list">
           ${parcoursData.experiences.map(item => `
-            <div class="parcours-card glass">
+            <a href="#/parcours/alternance/${item.id}" class="parcours-card glass">
               <div class="parcours-logo-container">
                 <img src="/logos/Logo_BL_Header.svg" alt="Berger-Levrault Logo" class="parcours-logo">
               </div>
@@ -887,7 +928,8 @@ const parcoursContent = `
               <h4>${item.title}</h4>
               <p><strong>${item.company}</strong></p>
               <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">${item.desc}</p>
-            </div>
+              <div class="card-footer-tip">Voir les détails →</div>
+            </a>
           `).join('')}
         </div>
       </div>
@@ -1056,6 +1098,57 @@ Object.entries(skillData.humaines).forEach(([id, data]) => {
           </div>
           <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
             <a href="#/competences" style="color: var(--primary); text-decoration: none; font-weight: 600;">← Retour aux compétences</a>
+          </div>
+        </div>
+      </div>
+    `
+  };
+});
+
+// Dynamic routes for Parcours entries
+parcoursData.formations.forEach(item => {
+  routes[`/parcours/formations/${item.id}`] = {
+    title: item.title,
+    content: `
+      <div class="realisation-centered">
+        <div class="parcours-logo-container" style="margin-bottom: 2rem;">
+          <a href="https://www.esiea.fr/" target="_blank" rel="noopener noreferrer" style="display: contents;">
+            <img src="/logos/Logo_ESIEA_2020.png" alt="ESIEA Logo" style="height: 80px; width: auto;">
+          </a>
+        </div>
+        <h1>${item.title}</h1>
+        <p class="section-subtitle">${item.institution} | ${item.date}</p>
+        <div class="glass" style="padding: 3rem; margin-top: 2rem;">
+          <div class="detailed-content">
+            ${item.fullContent}
+          </div>
+          <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <a href="#/parcours" style="color: var(--primary); text-decoration: none; font-weight: 600;">← Retour au parcours</a>
+          </div>
+        </div>
+      </div>
+    `
+  };
+});
+
+parcoursData.experiences.forEach(item => {
+  routes[`/parcours/alternance/${item.id}`] = {
+    title: item.title,
+    content: `
+      <div class="realisation-centered">
+        <div class="parcours-logo-container" style="margin-bottom: 2rem;">
+          <a href="https://www.berger-levrault.com/fr/" target="_blank" rel="noopener noreferrer" style="display: contents;">
+            <img src="/logos/Logo_BL_Header.svg" alt="Berger-Levrault Logo" style="height: 80px; width: auto;">
+          </a>
+        </div>
+        <h1>${item.title}</h1>
+        <p class="section-subtitle">${item.company} | ${item.date}</p>
+        <div class="glass" style="padding: 3rem; margin-top: 2rem;">
+          <div class="detailed-content">
+            ${item.fullContent}
+          </div>
+          <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <a href="#/parcours" style="color: var(--primary); text-decoration: none; font-weight: 600;">← Retour au parcours</a>
           </div>
         </div>
       </div>
