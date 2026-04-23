@@ -24,7 +24,8 @@ const SVGIcons = {
   home: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
   briefcase: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
   code: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
-  mail: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`
+  mail: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
+  cisco: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13v-2M6 15v-6M9 17V7M12 19V5M15 17V7M18 15v-6M21 13v-2"/></svg>`
 };
 
 // Personalized Data
@@ -375,7 +376,8 @@ const projectData = {
       <p>Au final, tous les PDU ont été remplacés. Aucun incident de production imprévu n’a été noté lors des opérations.</p>
 
       <h3>Lendemains du projet</h3>
-      <p>La MCO d’un datacenter ne se termine jamais. Au fur et à mesure, il y a toujours des équipements approchant leur fin de vie, de nouvelles mises à jour poussées pour des logiciels, et de nouveaux flux à ouvrir et à refermer. C’est une tâche liée au cycle de vie du datacenter.</p>
+      <p>La MCO d’un datacenter ne se termine jamais. Au fur et à mesure, il y a toujours des équipements approchant leur fin de vie, de nouvelles mises à jour poussées pour des logiciels, et de nouveaux flux à ouvrir et à refermer. C’est une tâche liée au cycle de vie du datacenter. De nombreux projets sont venus remplacer ceux cités dans notre backlog, tels que des migrations d’applicatifs, la mise en place de nouveaux environnements cloud, ou la gestion de nouveaux incidents critiques ou non-critiques, apportant constamment une nouvelle charge de travail pour les équipes du datacenter.</p>
+      <P>Actuellement, grâce à mes travaux et ceux de toutes les équipes de Berger-Levrault, le datacenter a pu renouveler ses certifications ISO 27001 et HDS, ainsi que sa classification TIER 3 par l’institut Uptime, ce qui prouve à nos clients un taux de disponibilité d’environ 99,982% à l’année. Cela permet d’attirer de nouveaux clients potentiels sur le secteur médico-social, qui se laisseraient tenter par une solution SaaS et les certifications du datacenter plutôt que par une solution on-premise leur demandant d’investir dans une infrastructure locale.</p>
 
       <h3>Regard critique</h3>
       <p>Je retiendrai de cette alternance la grande satisfaction d’avoir pu travailler sur une infrastructure si complexe et passionnante. La grande variété de technologies et de situations m’auront permis de renforcer fortement mes connaissances techniques et humaines. J’ai pu rapidement m’intégrer au sein de l’équipe Infrastructure & Cloud Operations de l’entreprise et m’épanouir dans un environnement que je venais à peine de découvrir. Je suis extrêmement reconnaissant envers toutes les équipes de Berger-Levrault qui m’ont apporté tout le soutien et les compétences nécessaires en matière d’administration systèmes et réseaux, de cybersécurité et de relation client.</p>
@@ -467,7 +469,7 @@ const skillData = {
 
         <h3>Mon évolution dans la compétence</h3>
         <p>Ayant pour projet professionnel de devenir architecte réseau, cette compétence est importante pour moi car aujourd’hui, la grande majorité des infrastructures de toute taille possèdent des serveurs Linux. Après tout, ces derniers sont tout aussi important que les équipements réseaux pour sécuriser une infrastructure, mais aussi pour la fiabiliser et la pérenniser.</p>
-        <p>Pour approfondir mes connaissances sur Linux, je souhaite pouvoir réaliser différentes opérations de maintenance et de gestion sur d’autres distributions Linux que les trois auxquelles j’ai eu régulièrement affaire, afin de plus m’habituer aux différences entre les différents types de distributions. J’ai aussi commencé à parcourir la <a href="https://wiki.archlinux.org/title/Main_page">documentation officielle de la distribution Arch Linux</a>, qui est considéré comme l’une des plus complètes de tout l’écosystème Linux, et qui est même applicable aux autres distributions.
+        <p>Pour approfondir mes connaissances sur Linux, je souhaite pouvoir réaliser différentes opérations de maintenance et de gestion sur d’autres distributions Linux que les trois auxquelles j’ai eu régulièrement affaire, afin de plus m’habituer aux différences entre les différents types de distributions.Je souhaite également passer la certification <a href="https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/">Linux Foundation Certified System Administrator (LFCS)</a>, qui est une certification officielle de la Fondation Linux afin d’améliorer mes compétences dans l’administration de systèmes Linux de tous types.</p>
       `
     },
     2: {
@@ -497,7 +499,7 @@ const skillData = {
 
       <h3>Mon évolution dans la compétence</h3>
       <p>Ayant pour projet professionnel de devenir architecte réseau, cette compétence est importante pour moi car aujourd’hui, les serveurs Windows portent une importance critique dans la grande majorité des infrastructures mises en place. Les Active Directory sont après tout beaucoup plus populaires que les solutions d’annuaire présentes sur Linux, notamment grâce à sa facilité d’utilisation.</p>
-      <p>Pour approfondir mes connaissances sur Windows Server, je souhaiterais pouvoir réaliser plus de projets de déploiement et de renouvellement de services Windows critiques, qui sont nombreux dans le datacenter de Berger-Levrault. J’ai aussi pu réaliser entre mars et juillet 2025 avec l’ESIEA une formation de Microsoft Security appelé « Sécurité Windows », permettant d’apprendre comment sécuriser et analyser une machine Windows Server.</p>
+      <p>Pour approfondir mes connaissances sur Windows Server, je souhaiterais pouvoir réaliser plus de projets de déploiement et de renouvellement de services Windows critiques, qui sont nombreux dans le datacenter de Berger-Levrault. J’ai aussi pu réaliser entre mars et juillet 2025 avec l’ESIEA une formation de Microsoft et Mandarine Security appelé « <a href="https://www.mandarine.academy/client/microsoft-et-mandarine-academy-collaborent-pour-former-a-la-cybersecurite/">Sécurité Windows</a> », permettant d’apprendre comment sécuriser et analyser une machine Windows Server.</p>
       `
     },
     3: {
@@ -530,7 +532,7 @@ const skillData = {
 
         <h3>Mon évolution dans la compétence</h3>
         <p>Ayant pour projet professionnel de devenir architecte réseau, cette compétence est très importante pour moi car aujourd’hui, la sécurité d’une infrastructure dépend en grande partie de l’organisation et de la segmentation des réseaux par des équipements de sécurité adéquats. Les pares-feux, commutateurs de couche 3 et bastions sont tous des éléments de cybersécurité importants, demandant une configuration particulière afin de ne pas interrompre du trafic légitime sans laisser de vulnérabilités aux attaquants.</p>
-        <p>Pour approfondir mes connaissances, je souhaiterais pouvoir réaliser des actions sur d’autres sites de Berger-Levrault que celui de Villeneuve-sur-Lot, afin de découvrir de nouvelles infrastructures et de nouveaux équipements. J’ai aussi pu réaliser entre 2022 et 2025 avec l’ESIEA quatre formations de Cisco intitulées « <a href="https://www.netacad.com/courses/ccna-introduction-networks?courseLang=en-US">CCNA: Introduction to Networks</a> », « <a href="https://www.netacad.com/courses/ccna-switching-routing-wireless-essentials?courseLang=en-US">CCNA: Switching, Routing and Wireless Essentials</a> », « <a href="https://www.netacad.com/courses/cyberops-associate?courseLang=en-US">Cisco CyberOps Associate</a> » et « <a href="https://www.netacad.com/courses/network-security?courseLang=en-US">Cisco Network Security</a> », qui m’ont permis d’apprendre la configuration réseau et système d’équipements Cisco, ainsi que des concepts importants de la cybersécurité. J’aimerais poursuivre ces formations en passant les formations CCNP Enterprise, qui sont la suite logique des certifications CCNA.</p>
+        <p>Pour approfondir mes connaissances, je souhaiterais pouvoir réaliser des actions sur d’autres sites de Berger-Levrault que celui de Villeneuve-sur-Lot, afin de découvrir de nouvelles infrastructures et de nouveaux équipements. J’ai aussi pu réaliser entre 2022 et 2025 avec l’ESIEA quatre formations de Cisco intitulées « <a href="https://www.netacad.com/courses/ccna-introduction-networks?courseLang=en-US">CCNA: Introduction to Networks</a> », « <a href="https://www.netacad.com/courses/ccna-switching-routing-wireless-essentials?courseLang=en-US">CCNA: Switching, Routing and Wireless Essentials</a> », « <a href="https://www.netacad.com/courses/cyberops-associate?courseLang=en-US">Cisco CyberOps Associate</a> » et « <a href="https://www.netacad.com/courses/network-security?courseLang=en-US">Cisco Network Security</a> », qui m’ont permis d’apprendre la configuration réseau et système d’équipements Cisco, ainsi que des concepts importants de la cybersécurité. J’aimerais poursuivre ces formations en passant les formations CCNP Enterprise telles que la formation <a href="https://www.netacad.com/courses/ccnp-enterprise-core-networking?courseLang=en-US">Core Networking</a>, qui sont la suite logique des certifications CCNA.</p>
       `
     },
     4: {
@@ -561,7 +563,7 @@ const skillData = {
 
         <h3>Mon évolution dans la compétence</h3>
         <p>Ayant pour projet professionnel de devenir architecte réseau, cette compétence est importante pour moi car une infrastructure virtualisée est aujourd’hui le cœur de tout datacenter. Lorsqu’elle est présente, le réseau de tout le datacenter est construit autour de cette infrastructure afin de pérenniser et sécuriser les accès au datacenter depuis l’extérieur.</p>
-        <p>Pour approfondir mes connaissances sur les outils VMware, je souhaite m’inscrire et passer les certifications VMware Certified Professional (VCP) et VMware Certified Advanced Professional (VCAP), qui sont des certifications officielles de VMware. Ces certifications me permettraient de valider mes compétences en matière de conception, administration et optimisation des outils de la suite VCF.</p>
+        <p>Pour approfondir mes connaissances sur les outils VMware, je souhaite m’inscrire et passer les certifications <a href="https://www.broadcom.com/support/education/vmware/certification">VMware Certified Professional (VCP) et VMware Certified Advanced Professional (VCAP)</a>, qui sont des certifications officielles de VMware. Ces certifications me permettraient de valider mes compétences en matière de conception, administration et optimisation des outils de la suite VCF.</p>
         `
     },
     5: {
@@ -710,25 +712,27 @@ const skillData = {
         <p>Cependant, je considère que j’ai encore beaucoup à apprendre dans ce domaine. Je fais souvent relire mes écrits à mon maître de formation ou tout autre collègue lorsque je communique avec un client. Cela me permet d’améliorer mon vocabulaire et ma formulation de phrases, tout en confirmant que les informations présentes dans les écrits soient correctes.</p>
 
         <h3>Mon évolution dans la compétence</h3>
-        <p>Ayant pour projet professionnel de devenir architecte réseau, la communication est essentielle pour exercer dans ce domaine. Un architecte réseau doit communiquer ses idées avec de nombreuses équipes, et défendre leurs choix techniques pour assurer une pleine compréhension des attentes et une organisation efficace en temps de projet. Afin de m’améliorer dans cette compétence, je vais suivre la formation <a href="https://openclassrooms.com/fr/courses/4929676-redigez-des-ecrits-professionnels">Rédigez des écrits professionnels</a>, proposée par l’organisme de formation OpenClassrooms.</p>
-      `
+        <p>Ayant pour projet professionnel de devenir architecte réseau, la communication est essentielle pour exercer dans ce domaine. Un architecte réseau doit communiquer ses idées avec de nombreuses équipes, et défendre leurs choix techniques pour assurer une pleine compréhension des attentes et une organisation efficace en temps de projet. Afin de m’améliorer dans cette compétence, je vais suivre la formation <a href="https://openclassrooms.com/fr/courses/4929676-redigez-des-ecrits-professionnels">Rédiger des écrits professionnels</a>, proposée par l’organisme de formation OpenClassrooms.</p>
+        `
     },
     5: {
       title: "Autonomie",
-      icon: SVGIcons.person,
+      icon: SVGIcons.message,
       desc: "Je sais réaliser des tâches et projets totalement en autonomie.",
       fullContent: `
         <h3>Ma définition</h3>
         <p>L’autonomie est la capacité d’une personne à réaliser des tâches par elle-même. Dans un cadre d’entreprise, une personne autonome est plus efficace dans son attribution et réalisation des tâches, puisqu’elle permet d’éviter des échanges inutiles entre un employé et ses supérieurs, réduisant le temps de réponse et donc la productivité globale de l’équipe.</p>
         
-        <h3>Mes éléments de preuve</h3>
+        <h3> Mes éléments de preuve</h3>
         <p>J’ai démarré mon apprentissage de l’autonomie dans le cadre de l’informatique dès mon baccalauréat général. Dans la spécialité NSI (Numérique et Sciences Informatiques), j’ai eu à réaliser seul différents travaux pratiques en nous servant des documentations officielles des outils, telles que la réalisation de pages web, des programmes écrits en Python, ou l’installation d’une machine virtuelle Linux. J’ai approfondi mon niveau d’autonomie au cours de mon Bachelor AIS.</p>
         <p>Je vais vous présenter mon expérience dans cette compétence à travers deux réalisations :</p>
+
         <ul>
           <li>La <a href="#/realisations/4">MCO d’un datacenter</a>, réalisé tout au long de mon alternance au sein de l’entreprise Berger-Levrault, entre 2023 et 2026.</li>
           <li>Le <a href="#/realisations/3">projet Netflow</a>, réalisé pendant la première année de mon alternance chez Berger-Levrault, entre 2023 et 2024.</li>
         </ul>
-        <p>Dans le cadre de la réalisation « MCO d’un datacenter », j’ai effectué seul des opérations de maintenance mineures sur des outils de management de l’infrastructure, telles que la mise à jour des serveurs de supervision Zabbix. Il m’a fallu plusieurs mois afin de comprendre la partie administration de l’infrastructure du datacenter, et ainsi être capable de réaliser seul des demandes de support de niveau N3 sur cette partie. Mon autonomie s’est fortement améliorée grâce à la grande quantité de documentations créée par les équipes de la BU Technologie de Berger-Levrault. Cela était un point très important pour mon alternance, puisque l’autonomie des membres de l’équipe Infra Engineering était capitale pour la prise en compte et le traitement des différents incidents possibles sur le datacenter.</p>
+
+        <p>Dans le cadre de la réalisation « MCO d’un datacenter », j’ai effectué seul des opérations de maintenance mineures sur des outils de management de l’infrastructure, telles que la mise à jour des serveurs de supervision Zabbix. Il m’a fallu plusieurs mois afin de comprendre la partie administration de l’infrastructure du datacenter, et ainsi être capable de réaliser seul des demandes de support de niveau N3 sur cette partie. Mon autonomie s’est fortement améliorée grâce à la grande quantité de documentations créée par les équipes de la BU Technologie de Berger-Levrault.Cela était un point très important pour mon alternance, puisque l’autonomie des membres de l’équipe Infra Engineering était capitale pour la prise en compte et le traitement des différents incidents possibles sur le datacenter.</p>
         <p>Le projet Netflow consistait en la mise en place d’un collecteur de flux Netflow afin de surveiller les flux transitant par les pares-feux du datacenter de Berger-Levrault. Pendant ce projet, j’ai pu appliquer mes compétence en termes d’autonomie, puisque j’avais un cahier des charges à respecter avec des contraintes temporelles importantes, et je n’ai pu recevoir qu’une aide minime sur des tâches que je ne pouvais pas réaliser par manque d’autorisations. La combinaison de technologies dont je n’étais pas du tout familier et de l’aide minime m’a permis de persévéré lorsque j’ai pu rencontrer des échecs, et améliorer ma prise de décisions sur les plans techniques et organisationnels.</p>
 
         <h3>Mon autocritique</h3>
@@ -746,56 +750,62 @@ const parcoursData = {
   formations: [
     {
       id: "master",
+      sortDate: "2026-07",
       date: "Septembre 2024 - Juillet 2026",
       title: "Mastère Expert cybersécurité et infrastructures des systèmes d’information",
       institution: "ESIEA Agen",
+      logo: "/logos/Logo_ESIEA_2020.png",
       fullContent: `
         <h3>Présentation</h3>
-        <p>À la suite de mon Bachelor AIS, j'ai choisi de rester au sein du Groupe ESIEA pour deux années de plus afin de compléter ma formation d'ingénieur avec un Mastère Expert en cybersécurité et infrastructures des systèmes d'information.</p>
+        <p>À la suite de mon Bachelor AIS, j'ai choisi de rester au sein du <a href="https://www.esiea.fr/">Groupe ESIEA</a> pour deux années de plus afin de compléter ma formation d'ingénieur avec un Mastère Expert en cybersécurité et infrastructures des systèmes d'information.</p>
         
         <h3>Ma vision de la pédagogie ESIEA</h3>
         <p>J'ai apprécié la pédagogie mise en place pour ce Mastère, car les cours étaient réalisés en distanciel et intégraient souvent des intervenants extérieurs. De plus, au cours de ces deux années, nous avons pu bénéficier de cours sur des domaines tels que le juridique appliqué au monde de l'entreprise, un renforcement sur nos connaissances de la gestion de projet, ou encore le passage du TOEIC pour nous préparer au monde de demain, où les compétences transverses sont un vrai plus.</p>
-      `
+`
     },
     {
       id: "bachelor",
+      sortDate: "2024-07",
       date: "Septembre 2021 - Juillet 2024",
       title: "Bachelor AIS",
       institution: "ESIEA Agen",
+      logo: "/logos/Logo_ESIEA_2020.png",
       fullContent: `
         <h3>Présentation</h3>
-        <p>Après avoir obtenu mon Baccalauréat Général, j'ai intégré le Groupe AEN au campus d'Agen (47000) pour réaliser trois années d'études. Cette école propose des formations d'ingénieurs sur cinq ans, ainsi que des Bachelors, Masters et autres formations spécialisées dans le domaine du numérique. Au début de ma troisième année, le Groupe AEN a été acquis par le Groupe ESIEA.</p>
+        <p>Après avoir obtenu mon Baccalauréat Général, j'ai intégré le Groupe AEN au campus d'Agen (47000) pour réaliser trois années d'études. Cette école propose des formations d'ingénieurs sur cinq ans, ainsi que des Bachelors, Masters et autres formations spécialisées dans le domaine du numérique. Au début de ma troisième année, le Groupe AEN a été acquis par le <a href="https://www.esiea.fr/">Groupe ESIEA</a>.</p>
         
         <h3>Ma vision de la pédagogie ESIEA</h3>
         <p>J'ai beaucoup apprécié la pédagogie mise en place par l'ESIEA, qui se base sur des projets informatiques et de formation humaine. Ces projets nous ont permis de développer fortement nos compétences humaines car nous étions en contact avec de véritables clients comme en entreprise, ce qui m'a aidé lors de ma recherche d'alternance.</p>
-      `
+`
     },
   ],
   experiences: [
     {
       id: "alternance-bl",
+      sortDate: "2026-08",
       date: "Septembre 2024 - Août 2026",
       title: "Alternance Administrateur d'Infrastructures",
       company: "Berger-Levrault",
+      logo: "/logos/Logo_BL_Header.svg",
       desc: "Site de Villeneuve-sur-Lot (47300)",
       fullContent: `
         <h3>Présentation</h3>
-        <p>Berger-Levrault est un groupe français spécialisé dans l'édition de logiciels à destination des professionnels du secteur public et privé. J'ai intégré cette entreprise dans le cadre d'une alternance d'une durée d'un an, puis étendue de deux années supplémentaires entre septembre 2023 et juillet 2026. J'ai effectué mes missions au sein de l'équipe Infrastructure & Cloud Operations en tant qu'Administrateur d'Infrastructures.</p>
+        <p><a href="https://www.berger-levrault.com/fr/">Berger-Levrault</a> est un groupe français spécialisé dans l'édition de logiciels à destination des professionnels du secteur public et privé. J'ai intégré cette entreprise dans le cadre d'une alternance d'une durée d'un an, puis étendue de deux années supplémentaires entre septembre 2023 et juillet 2026. J'ai effectué mes missions au sein de l'équipe Infrastructure & Cloud Operations en tant qu'Administrateur d'Infrastructures.</p>
 
         <h3>Travail effectué</h3>
         <p>Durant mon alternance, j'ai participé à la <a href="#/realisations/4">MCO du datacenter</a> de Villeneuve-sur-Lot (47300), qui héberge la partie médico-sociale du groupe. J'ai aussi pu réaliser divers projets tels que la <a href="#/realisations/3">conception d'un collecteur Netflow</a>, ou encore la <a href="#/realisations/5">mise en place d'une solution de supervision</a>.</p>
         
         <h3>Ma place dans l'entreprise</h3>
         <p>J'ai su <a href="#/competences/humaines/2">m'intégrer à l'équipe Infrastructure & Cloud Operations</a>, et j'ai pu rapidement monter en compétence sur les différentes technologies utilisées par le groupe. Après trois ans, j'ai maîtrisé l'infrastructure réseau du datacenter, et j'ai ainsi pu réaliser de nombreuses tâches en <a href="#/competences/humaines/5">autonomie</a>.</p>
-      `
+`
     }
   ],
   certifications: [
-    { date: "Décembre 2025", title: "Cisco Network Security" },
-    { date: "Juillet 2025", title: "Cisco CyberOps Associate" },
-    { date: "Juillet 2025", title: "Microsoft Security: Sécurité Windows" },
-    { date: "Octobre 2024", title: "CCNA : Switching, Routing, and Wireless Essentials" },
-    { date: "Janvier 2023", title: "CCNA : Introduction to Networks" }
+    { sortDate: "2025-12", date: "Décembre 2025", title: "Cisco Network Security", company: "Cisco Networking Academy", icon: SVGIcons.cisco },
+    { sortDate: "2025-07", date: "Juillet 2025", title: "Cisco CyberOps Associate", company: "Cisco Networking Academy", icon: SVGIcons.cisco },
+    { sortDate: "2025-07", date: "Juillet 2025", title: "Microsoft Security: Sécurité Windows", company: "Mandarine Academy" },
+    { sortDate: "2024-10", date: "Octobre 2024", title: "CCNA : Switching, Routing, and Wireless Essentials", company: "Cisco Networking Academy", icon: SVGIcons.cisco },
+    { sortDate: "2023-01", date: "Janvier 2023", title: "CCNA : Introduction to Networks", company: "Cisco Networking Academy", icon: SVGIcons.cisco }
   ]
 };
 
@@ -866,88 +876,79 @@ const homeContent = `
 
 const presentationContent = `
   <h1>Ma présentation</h1>
-  <div class="glass" style="padding: 2rem; text-align: left; margin-top: 2rem;">
-    <p>De nature curieuse, j’ai toujours eu une envie d’apprendre dans des domaines en tout genre. Cette soif de connaissances me pousse à toujours essayer de repousser mes limites. J’aime aussi 
-      travailler sur des projets utilisant de nouvelles technologies et relever de nouveaux défis toujours plus complexes et ambitieux. Cela me permet de me remettre en question constamment et de 
-      régulièrement progresser.
-    </p>
-    <p>Actuellement étudiant de 5ème année à l’ESIEA dans la filière Administrateur des Systèmes d’Informations (ASI), et alternant en tant qu’Administrateur d’Infrastructures au sein de l’entreprise 
-      Berger-Levrault, j’ai eu l’occasion de travailler sur de nombreux projets variés. Ces expériences m’ont permis de découvrir mes préférences dans ce métier : les architectures réseaux et les 
-      infrastructures virtualisées.
-    </p>
-    <p>Fort d’une expérience pluriannuelle au sein des équipes de gestion d’un datacenter, j’ai appris à m’adapter à des infrastructures de grande taille, et à la nécessité de livrer des solutions 
-      techniques conformes à diverses réglementations telles que l’ISO 27001 ou la certification HDS. Le large éventail de technologies que j’ai pu utiliser me permettent de créer et gérer des 
-      infrastructures sécurisées et redondantes.
-    </p>
-    <p>Mes différents projets et collaborations m’ont permis de développer mes compétences humaines. J’ai su user de persévérance afin de mener à bien des projets ambitieux et complexes. De plus, 
-      j’ai eu l’occasion d’améliorer mon organisation lors de mes projets étudiants, ce qui m’a aidé à mener à bien des projets avec de nombreuses parties prenantes. Finalement, j’ai pu développer 
-      mon professionnalisme grâce aux rencontres avec des professionnels du secteur et différentes parties prenantes au cours de mes projets.
-    </p>
-    <p>Je suis une personne plutôt sérieuse, motivée et perfectionniste. Je cherche constamment à découvrir de nouveaux domaines et disciples sur lesquelles m’intéresser. Je suis actuellement 
-      fortement intéressé par les sports mécaniques, qui sont des disciplines de pointe extrêmement compétitives, ainsi que les jeux vidéo, qui sont des sources d’inspirations pour moi.
-    </p>
-    <p>J’ai pour projet professionnel d’exercer en tant qu’architecte réseau pour une grande entreprise. C’est un métier qui consiste en la conception et la planification de réseaux de grande taille. 
-      C’est une évolution de mon métier actuel, demandant une grande maîtrise technique et une capacité analytique et de conception. Mes projets personnels sont de développer mon propre jeu vidéo 
-      et le proposer au grand public, ainsi que de renforcer ma culture générale, notamment en apprenant l’allemand. 
-    </p>
-  </div>
+    <div class="glass" style="padding: 2rem; text-align: left; margin-top: 2rem;">
+      <p>De nature curieuse, j’ai toujours eu une envie d’apprendre dans des domaines en tout genre. Cette soif de connaissances me pousse à toujours essayer de repousser mes limites. J’aime aussi
+        travailler sur des projets utilisant de nouvelles technologies et relever de nouveaux défis toujours plus complexes et ambitieux. Cela me permet de me remettre en question constamment et de
+        régulièrement progresser.
+      </p>
+      <p>Actuellement étudiant de 5ème année à l’ESIEA dans la filière Administrateur des Systèmes d’Informations (ASI), et alternant en tant qu’Administrateur d’Infrastructures au sein de l’entreprise
+        Berger-Levrault, j’ai eu l’occasion de travailler sur de nombreux projets variés. Ces expériences m’ont permis de découvrir mes préférences dans ce métier : les architectures réseaux et les
+        infrastructures virtualisées.
+      </p>
+      <p>Fort d’une expérience pluriannuelle au sein des équipes de gestion d’un datacenter, j’ai appris à m’adapter à des infrastructures de grande taille, et à la nécessité de livrer des solutions
+        techniques conformes à diverses réglementations telles que l’ISO 27001 ou la certification HDS. Le large éventail de technologies que j’ai pu utiliser me permettent de créer et gérer des
+        infrastructures sécurisées et redondantes.
+      </p>
+      <p>Mes différents projets et collaborations m’ont permis de développer mes compétences humaines. J’ai su user de persévérance afin de mener à bien des projets ambitieux et complexes. De plus,
+        j’ai eu l’occasion d’améliorer mon organisation lors de mes projets étudiants, ce qui m’a aidé à mener à bien des projets avec de nombreuses parties prenantes. Finalement, j’ai pu développer
+        mon professionnalisme grâce aux rencontres avec des professionnels du secteur et différentes parties prenantes au cours de mes projets.
+      </p>
+      <p>Je suis une personne plutôt sérieuse, motivée et perfectionniste. Je cherche constamment à découvrir de nouveaux domaines et disciples sur lesquelles m’intéresser. Je suis actuellement
+        fortement intéressé par les sports mécaniques, qui sont des disciplines de pointe extrêmement compétitives, ainsi que les jeux vidéo, qui sont des sources d’inspirations pour moi.
+      </p>
+      <p>J’ai pour projet professionnel d’exercer en tant qu’architecte réseau pour une grande entreprise. C’est un métier qui consiste en la conception et la planification de réseaux de grande taille.
+        C’est une évolution de mon métier actuel, demandant une grande maîtrise technique et une capacité analytique et de conception. Mes projets personnels sont de développer mon propre jeu vidéo
+        et le proposer au grand public, ainsi que de renforcer ma culture générale, notamment en apprenant l’allemand.
+      </p>
+    </div>
 `;
 
-const parcoursContent = `
-  <div class="realisation-centered">
-    <h1>Mon Parcours</h1>
-    <p class="section-subtitle">Retrouvez ici les étapes clés de ma formation et de mon expérience professionnelle.</p>
-    
-    <div class="parcours-grid">
-      <div class="parcours-col glass">
-        <h3>${SVGIcons.automation} Formations</h3>
-        <div class="parcours-list">
-          ${parcoursData.formations.map(item => `
-            <a href="#/parcours/formations/${item.id}" class="parcours-card glass">
-              <div class="parcours-logo-container">
-                <img src="/logos/Logo_ESIEA_2020.png" alt="ESIEA Logo" class="parcours-logo">
-              </div>
-              <span class="parcours-date">${item.date}</span>
-              <h4>${item.title}</h4>
-              <p>${item.institution}</p>
-              <div class="card-footer-tip">Voir les détails →</div>
-            </a>
-          `).join('')}
-        </div>
-      </div>
+const getParcoursTimeline = () => {
+  const allItems = [
+    ...parcoursData.formations,
+    ...parcoursData.experiences,
+    ...parcoursData.certifications
+  ].sort((a, b) => (b.sortDate || "").localeCompare(a.sortDate || ""));
 
-      <div class="parcours-col glass">
-        <h3>${SVGIcons.briefcase} Alternance</h3>
-        <div class="parcours-list">
-          ${parcoursData.experiences.map(item => `
-            <a href="#/parcours/alternance/${item.id}" class="parcours-card glass">
-              <div class="parcours-logo-container">
-                <img src="/logos/Logo_BL_Header.svg" alt="Berger-Levrault Logo" class="parcours-logo">
-              </div>
-              <span class="parcours-date">${item.date}</span>
-              <h4>${item.title}</h4>
-              <p><strong>${item.company}</strong></p>
-              <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">${item.desc}</p>
-              <div class="card-footer-tip">Voir les détails →</div>
-            </a>
-          `).join('')}
-        </div>
-      </div>
+  return `
+    <div class="parcours-section realisation-centered">
+      <h1>Mon Parcours</h1>
+      <p class="section-subtitle">Au cours de mes études et de mes expériences professionnelles, j'ai suivi différentes formations et acquis des compétences. Voici mon parcours.</p>
+      
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        ${allItems.map((item, index) => {
+    const isClickable = !!item.id;
+    const href = item.id ? (item.institution ? `#/parcours/formations/${item.id}` : `#/parcours/alternance/${item.id}`) : '#';
 
-      <div class="parcours-col glass">
-        <h3>${SVGIcons.network} Certifications</h3>
-        <div class="parcours-list">
-          ${parcoursData.certifications.map(item => `
-            <div class="parcours-card glass">
-              <span class="parcours-date">${item.date}</span>
-              <h4>${item.title}</h4>
+    return `
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">${item.date}</div>
+              <div class="timeline-content-wrapper">
+                ${isClickable ? `<a href="${href}" class="parcours-card glass">` : `<div class="parcours-card glass">`}
+                  <div class="card-body">
+                    <div class="card-image">
+                      ${item.logo ? `<img src="${item.logo}" alt="Logo">` : (item.icon || SVGIcons.briefcase)}
+                    </div>
+                    <div class="card-text">
+                      <h3>${item.title}</h3>
+                      <p class="card-subtitle">${item.company || item.institution || ""}</p>
+                      ${item.desc ? `<p class="card-description">${item.desc}</p>` : ''}
+                    </div>
+                  </div>
+                ${isClickable ? '</a>' : '</div>'}
+              </div>
             </div>
-          `).join('')}
-        </div>
+          `;
+  }).join('')}
       </div>
     </div>
-  </div>
-`;
+  `;
+};
+
+// Use a getter for parcoursContent to always get sorted timeline
+const getParcoursContent = () => getParcoursTimeline();
 
 const realisationsHomeContent = `
   <div class="realisation-centered">
@@ -963,7 +964,7 @@ const realisationsHomeContent = `
       `).join('')}
     </div>
   </div>
-`;
+  `;
 
 const competencesHomeContent = `
   <div class="realisation-centered">
@@ -996,7 +997,7 @@ const competencesHomeContent = `
       </div>
     </div>
   </div>
-`;
+  `;
 
 const contactContent = `
   <div class="contact-container" style="margin-top: -2rem;">
@@ -1019,7 +1020,7 @@ const contactContent = `
 const routes = {
   '/': { title: 'Accueil', content: homeContent },
   '/presentation': { title: 'Ma Présentation', content: presentationContent },
-  '/parcours': { title: 'Mon Parcours', content: parcoursContent },
+  '/parcours': { title: 'Mon Parcours', content: getParcoursContent() },
   '/realisations': { title: 'Réalisations', content: realisationsHomeContent },
   '/competences': { title: 'Compétences', content: competencesHomeContent },
   '/competences/techniques': { title: 'Compétences Techniques', content: `<h1>Compétences Techniques</h1>${competencesHomeContent}` },
@@ -1030,7 +1031,7 @@ const routes = {
 // Sub-pages with personalized content
 Object.entries(projectData).forEach(([id, data]) => {
   const relatedSkillsHTML = data.relatedSkills ? `
-    <div class="related-skills">
+  <div class="related-skills">
       <h3>Compétences rattachées</h3>
       <div class="skills-chips">
         ${data.relatedSkills.map(s => {
@@ -1048,7 +1049,7 @@ Object.entries(projectData).forEach(([id, data]) => {
   routes[`/realisations/${id}`] = {
     title: data.title,
     content: `
-      <div class="realisation-centered">
+  <div class="realisation-centered">
         <span class="hero-icon">${data.icon}</span>
         <h1>${data.title}</h1>
         <div class="glass" style="padding: 3rem; margin-top: 2rem;">
@@ -1061,7 +1062,7 @@ Object.entries(projectData).forEach(([id, data]) => {
           </div>
         </div>
       </div>
-    `
+  `
   };
 });
 
@@ -1069,7 +1070,7 @@ Object.entries(skillData.techniques).forEach(([id, data]) => {
   routes[`/competences/techniques/${id}`] = {
     title: data.title,
     content: `
-      <div class="realisation-centered">
+  <div class="realisation-centered">
         <span class="hero-icon">${data.icon}</span>
         <h1>${data.title}</h1>
         <div class="glass" style="padding: 3rem; margin-top: 2rem;">
@@ -1081,7 +1082,7 @@ Object.entries(skillData.techniques).forEach(([id, data]) => {
           </div>
         </div>
       </div>
-    `
+  `
   };
 });
 
@@ -1089,7 +1090,7 @@ Object.entries(skillData.humaines).forEach(([id, data]) => {
   routes[`/competences/humaines/${id}`] = {
     title: data.title,
     content: `
-      <div class="realisation-centered">
+  <div class="realisation-centered">
         <span class="hero-icon">${data.icon}</span>
         <h1>${data.title}</h1>
         <div class="glass" style="padding: 3rem; margin-top: 2rem;">
@@ -1101,7 +1102,7 @@ Object.entries(skillData.humaines).forEach(([id, data]) => {
           </div>
         </div>
       </div>
-    `
+  `
   };
 });
 
@@ -1110,7 +1111,7 @@ parcoursData.formations.forEach(item => {
   routes[`/parcours/formations/${item.id}`] = {
     title: item.title,
     content: `
-      <div class="realisation-centered">
+  <div class="realisation-centered">
         <div class="parcours-logo-container" style="margin-bottom: 2rem;">
           <a href="https://www.esiea.fr/" target="_blank" rel="noopener noreferrer" style="display: contents;">
             <img src="/logos/Logo_ESIEA_2020.png" alt="ESIEA Logo" style="height: 80px; width: auto;">
@@ -1127,7 +1128,7 @@ parcoursData.formations.forEach(item => {
           </div>
         </div>
       </div>
-    `
+  `
   };
 });
 
@@ -1135,7 +1136,7 @@ parcoursData.experiences.forEach(item => {
   routes[`/parcours/alternance/${item.id}`] = {
     title: item.title,
     content: `
-      <div class="realisation-centered">
+  <div class="realisation-centered">
         <div class="parcours-logo-container" style="margin-bottom: 2rem;">
           <a href="https://www.berger-levrault.com/fr/" target="_blank" rel="noopener noreferrer" style="display: contents;">
             <img src="/logos/Logo_BL_Header.svg" alt="Berger-Levrault Logo" style="height: 80px; width: auto;">
@@ -1152,9 +1153,10 @@ parcoursData.experiences.forEach(item => {
           </div>
         </div>
       </div>
-    `
+  `
   };
 });
+
 
 const render = () => {
   const path = window.location.hash.slice(1) || '/';
@@ -1164,13 +1166,13 @@ const render = () => {
 
   app.innerHTML = `
     ${Navigation(projectData, skillData, SVGIcons)}
-    <main>
-      <div class="container fade-in">
-        ${route.content}
-      </div>
-    </main>
+<main>
+  <div class="container fade-in">
+    ${route.content}
+  </div>
+</main>
     ${Footer(projectData, skillData)}
-  `;
+`;
   window.scrollTo(0, 0);
 
   // Sidebar & Mobile Drawer Logic
